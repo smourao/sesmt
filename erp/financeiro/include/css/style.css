@@ -1,0 +1,251 @@
+body{
+ font-family: verdana;
+ /*color: #FFFFFF;*/
+ font-size: 12px;
+}
+
+td.verde{
+ font-size: 12px;
+ /*background-color: #009966;
+ color: #FFFFFF;   */
+ /*border-width: 1px;*/
+ font-family: Verdana;
+}
+
+td{
+ font-size: 12px;
+}
+
+td.info{
+ font-size: 12px;
+ background-color: #008000;
+ color: #FFFFFF;
+}
+
+
+input[type=submit] {
+    border: 1px solid #006;
+    background: #008000;
+    color:#99cc33;
+}
+
+
+input[type=submit]:hover {
+    border: 1px solid #006;
+    background: #008000;
+    color:#99cc33; 
+}
+
+input.submit{
+    border: 1px solid #006;
+    background: #008000;
+    color:#99cc33;
+}
+
+
+input.submit:hover{
+    border: 1px solid #006;
+    background: #008000;
+    color:#99cc33;
+}
+
+
+input[type=button] {
+    border: 1px solid #006;
+    background: #008000;
+    color:#99cc33;
+}
+
+
+input[type=button]:hover {
+    border: 1px solid #006;
+    background: #008000;
+    color:#99cc33;
+}
+
+
+input.button{
+    border: 1px solid #006;
+    background: #008000;
+    color:#99cc33;
+}
+
+
+input.button:hover{
+    border: 1px solid #006;
+    background: #008000;
+    color:#99cc33;
+}
+
+
+a.link{
+ font-family: verdana;
+ color: #FFFFFF;
+ text-decoration: none;
+ font-size: 12px;
+}
+
+a.link:hover{
+ font-family: verdana;
+ color: #99cc33;
+ text-decoration: none;
+ font-size: 12px;
+}
+
+a.green{
+ font-family: verdana;
+ color: #99cc33 ;
+ text-decoration: none;
+ font-size: 12px;
+}
+
+a.green:hover{
+ font-family: verdana;
+ color: #99cc33;
+ text-decoration: underline;
+ font-size: 12px;
+}
+
+input[type=text] {
+/*width: 300px;*/
+/*background-color: cyan;*/
+ /*background-color:336699;*/
+  /*border-color:336699;*/
+  border-style:groove;/*solid;*/
+  border-width:1px;
+}
+
+input[type=password] {
+  border-style:groove;/*solid;*/
+  border-width:1px;
+}
+
+
+p{
+line-height:100%;
+}
+
+div.title1{
+text-align:center;
+font-weight:bold;
+}
+
+span.title1{
+text-align:center;
+font-weight:bold;
+}
+
+a{
+ color: #99cc33;
+ font-size: 12px;
+}
+
+a:hover{
+ color: #99cc33;
+ font-size: 12px;
+text-decoration: underline;
+}
+
+a.white{
+ color: #FFFFFF;
+ font-size: 12px;
+ text-decoration: none;
+}
+
+a.white:hover{
+ color: #FFFFFF;
+ font-size: 12px;
+text-decoration: underline;
+}
+
+.fontebranca12{
+font-family:Verdana;
+color: #FFFFFF;
+font-size:12px;
+}
+
+
+.difcursor{
+ cursor:pointer;
+}  
+
+.alert1{
+font-family:Verdana;
+color: #990000;
+font-size:10px;
+text-align: middle;
+}
+
+.menu_dotted{
+   border-width:1px;
+   border-left:0px;
+   border-right:0px;
+   border-bottom:0px;
+   border-style:dotted;
+   border-color:#008000;
+}
+
+
+/* DESCRIÇÕES EM POPUP*/
+.thumbnail{
+position: relative;
+z-index: 0;
+}
+
+.thumbnail:hover{
+background-color: transparent;
+z-index: 50;
+}
+
+.thumbnail div{ /*CSS for enlarged image*/
+position: absolute;
+background-color: lightyellow;
+padding: 5px;
+left: -1000px;
+border: 1px dashed gray;
+visibility: hidden;
+color: black;
+text-decoration: none;
+}
+
+.thumbnail div img{ /*CSS for enlarged image*/
+border-width: 0;
+padding: 2px;
+}
+
+.thumbnail:hover div{ /*CSS for enlarged image on hover*/
+visibility: visible;
+top: 0;
+left: 60px; /*position where enlarged image should offset horizontally */
+
+}
+
+
+
+/*Do not Alter these. Set for alignment*/
+.css1{
+position:absolute;top:0px;left:0px;
+width:16px;height:16px;
+font-family:Arial,sans-serif;
+font-size:16px;
+text-align:center;
+font-weight:bold;
+}
+.css2{
+position:absolute;top:0px;left:0px;
+width:10px;height:10px;
+font-family:Arial,sans-serif;
+font-size:10px;
+text-align:center;
+}
+
+.dia {font-family: helvetica, arial; font-size: 8pt; color: #FFFFFF}
+.data {font-family: helvetica, arial; font-size: 8pt; text-decoration:none; color:#191970}
+.data:hover{font-family: helvetica, arial; font-size: 8pt; text-decoration:none; color:#000000; font-weight:bold;}
+.mes {font-family: helvetica, arial; font-size: 8pt}
+.Cabecalho_Calendario {font-family: helvetica, arial; font-size: 10pt; color: #000000; text-decoration:none; font-weight:bold}
+.Cabecalho_Calendario:hover{font-family: helvetica, arial; font-size: 10pt; color: #000000; text-decoration:none; font-weight:bold}
+.mes {font-family: helvetica, arial; font-size: 8pt; text-decoration:none; color:#191970}
+.mes:hover {font-family: helvetica, arial; font-size: 8pt; text-decoration:none; color:#191970; font-weight:bold}
+
+

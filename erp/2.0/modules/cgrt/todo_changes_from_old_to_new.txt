@@ -1,0 +1,26 @@
+[ppra2_equip_Alt]
+- Pé direito 	 [done]
+- Nº pavimentos  [done]
+- Frente 	 [done]
+- Comp. 	 [done]
+- Aparelho 	 [done]
+- Data avaliação [done]
+- Hora avaliação [done]
+
+[ppra2_alt]
+- Funcionários terceirizados [done]
+
+[Pavimentos e escada]
+- Número de escadas
+ . fita anti-derrapante?
+ . número de degraus
+ . largura
+ . interna ou externa
+ . corrimão amarelo?
+
+---------------------------------------------------------------
+--> IMPROVES / UPDATES
+---------------------------------------------------------------
+[MISC]
+- Ao excluir setor, remover o cod_setor dos funcionários do setor excluído. [done]
+- Ao excluir setor, excluir medidas preventivas para o setor excluído. [done]

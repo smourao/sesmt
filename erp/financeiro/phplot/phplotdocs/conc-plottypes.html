@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /><title>3.4. PHPlot Plot Types</title><link rel="stylesheet" href="phplotdoc.css" type="text/css" /><meta name="generator" content="DocBook XSL Stylesheets V1.73.2" /><link rel="start" href="index.html" title="PHPlot Reference Manual" /><link rel="up" href="concepts.html" title="Chapter 3. PHPlot Concepts" /><link rel="prev" href="conc-datatypes.html" title="3.3. PHPlot Data Types" /><link rel="next" href="conc-colors.html" title="3.5. Colors" /></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">3.4. PHPlot Plot Types</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="conc-datatypes.html">Prev</a> </td><th width="60%" align="center">Chapter 3. PHPlot Concepts</th><td width="20%" align="right"> <a accesskey="n" href="conc-colors.html">Next</a></td></tr></table><hr /></div><div class="sect1" lang="en" xml:lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="conc-plottypes"></a>3.4. PHPlot Plot Types</h2></div></div></div><div class="abstract"><p class="title"><b>Abstract</b></p><p>
+This section describes the PHPlot plot types and their individual data
+type requirements. Plot types determine the overall look of the
+graphical representation of the data values. To select the plot type,
+use <a class="xref" href="SetPlotType.html" title="SetPlotType"><span class="refentrytitle">SetPlotType</span></a>.
+The following plot types are available:
+</p><div class="informaltable"><table summary="Available plot types" border="1"><colgroup><col /><col /></colgroup><thead><tr><th>Plot Type</th><th>Description</th></tr></thead><tbody><tr><td><a class="link" href="conc-plottypes.html#plottype-area" title="3.4.1. Plot Type: area (Area Plot)">area</a></td><td>Filled areas between lines. Also known as 'cumulative line
+            plot' or 'component line plot'.</td></tr><tr><td><a class="link" href="conc-plottypes.html#plottype-bars" title="3.4.2. Plot Type: bars (Bar Graph)">bars</a></td><td>Filled bars with optional 3-D look, multiple datasets are offset</td></tr><tr><td><a class="link" href="conc-plottypes.html#plottype-linepoints" title="3.4.3. Plot Type: linepoints (Lines and Points)">linepoints</a></td><td>Lines between points, a marker at each point, optional error bars
+</td></tr><tr><td><a class="link" href="conc-plottypes.html#plottype-lines" title="3.4.4. Plot Type: lines (Lines Graph)">lines</a></td><td>Straight lines between data points, optional error bars</td></tr><tr><td><a class="link" href="conc-plottypes.html#plottype-pie" title="3.4.5. Plot Type: pie (Pie Chart)">pie</a></td><td>Pie chart with or without 3-D affects</td></tr><tr><td><a class="link" href="conc-plottypes.html#plottype-points" title="3.4.6. Plot Type: points (Styled Dot Plot)">points</a></td><td>Draws a marker at each data point, optional error bars</td></tr><tr><td><a class="link" href="conc-plottypes.html#plottype-squared" title="3.4.7. Plot Type: squared (Step Plot)">squared</a></td><td>Stepped lines</td></tr><tr><td><a class="link" href="conc-plottypes.html#plottype-stackedbars" title="3.4.8. Plot Type: stackedbars">stackedbars</a></td><td>Filled bars with optional 3-D look, multiple data sets
+            are accumulated and the sum is graphed</td></tr><tr><td><a class="link" href="conc-plottypes.html#plottype-thinbarline" title="3.4.9. Plot Type: thinbarline">thinbarline</a></td><td>Vertical lines from X axis up. Also known as impulse.</td></tr></tbody></table></div><p>
+
+  </p></div><div class="sect2" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="plottype-area"></a>3.4.1. Plot Type: area (Area Plot)</h3></div></div></div><p>
+This plot type draws filled areas between lines.
+This is often called a 'cumulative line plot' or 'component line plot'.
+Each data set (set of corresponding Y values from each record in the
+data array) is plotted in order, with the area
+between each line and the next line is filled solid. The area between the
+last line and the X axis is also filled. The data must be arranged
+so the values are (generally) decreasing within each row, because later
+drawn filled areas will cover previously drawn areas.
+</p><p>
+This plot type works with data types 'text-data' and 'data-data'
+(see <a class="xref" href="conc-datatypes.html#conc-datatypes-types" title="3.3.1. Available Data Types">Section 3.3.1, &#8220;Available Data Types&#8221;</a>).
+For 'text-data', the data X values are assumed to be at 0.5+N for N=0,1,2...
+</p><p>
+The areas are filled with colors as set with <a class="xref" href="SetDataColors.html" title="SetDataColors"><span class="refentrytitle">SetDataColors</span></a>.
+</p><p>
+An example of this plot type can be seen in
+<a class="xref" href="ex-area1.html#example-area1" title="Example 5.3. Area Plot">Example 5.3, &#8220;Area Plot&#8221;</a>.
+</p></div><div class="sect2" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="plottype-bars"></a>3.4.2. Plot Type: bars (Bar Graph)</h3></div></div></div><p>
+This plot type draws a bar chart, with filled rectangles centered on
+the X values. The rectangles can have a 3-D look or be flat with a border.
+Multiple data-set plots work, with each one producing a set of bars
+offset from the previous set.
+</p><p>
+This plot type only works with data type 'text-data'
+(see <a class="xref" href="conc-datatypes.html#conc-datatypes-types" title="3.3.1. Available Data Types">Section 3.3.1, &#8220;Available Data Types&#8221;</a>).
+The data X values are assumed to be at 0.5+N for N=0,1,2...
+</p><p>
+If shading is on with <a class="xref" href="SetShading.html" title="SetShading"><span class="refentrytitle">SetShading</span></a> (default is on with value
+5 pixels), then the bars have a 3-D look. If shading is off
+(<code class="function">SetShading(0)</code>), the bars are flat rectangles with borders.
+The filled rectangle color is set with <a class="xref" href="SetDataColors.html" title="SetDataColors"><span class="refentrytitle">SetDataColors</span></a>.
+The border color (if shading is off) can be set with
+<a class="xref" href="SetDataBorderColors.html" title="SetDataBorderColors"><span class="refentrytitle">SetDataBorderColors</span></a>.
+</p><p>
+Examples of this plot type can be seen in
+<a class="xref" href="ex-bars1.html#example-bars1" title="Example 5.4. Bar Chart">Example 5.4, &#8220;Bar Chart&#8221;</a> and <a class="xref" href="ex-bars2.html#example-bars2" title="Example 5.5. Bar Chart - Unshaded">Example 5.5, &#8220;Bar Chart - Unshaded&#8221;</a>.
+</p></div><div class="sect2" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="plottype-linepoints"></a>3.4.3. Plot Type: linepoints (Lines and Points)</h3></div></div></div><p>
+This plot type draws a line graph with a markers at each point, thus
+combining the 'line' and 'point' plot types.
+</p><p>
+This plot type works with data types 'text-data' and 'data-data'
+(see <a class="xref" href="conc-datatypes.html#conc-datatypes-types" title="3.3.1. Available Data Types">Section 3.3.1, &#8220;Available Data Types&#8221;</a>).
+It also works with 'data-data-error' for error bars.
+</p><p>
+Line and marker colors for each line are set with
+<a class="xref" href="SetDataColors.html" title="SetDataColors"><span class="refentrytitle">SetDataColors</span></a>.
+Marker styles for each line are set with <a class="xref" href="SetPointShapes.html" title="SetPointShapes"><span class="refentrytitle">SetPointShapes</span></a>.
+Marker sizes for each line are set with <a class="xref" href="SetPointSizes.html" title="SetPointSizes"><span class="refentrytitle">SetPointSizes</span></a>.
+Line widths for each line are set with <a class="xref" href="SetLineWidths.html" title="SetLineWidths"><span class="refentrytitle">SetLineWidths</span></a>.
+Line styles (solid or dashed) for each line are set with
+<a class="xref" href="SetLineStyles.html" title="SetLineStyles"><span class="refentrytitle">SetLineStyles</span></a>.
+</p><p>
+You can also suppress the line, or the markers, for individual data sets
+in a graph.
+This allows you combine points-only, lines-only, and line/points plots.
+Refer to <a class="xref" href="SetLineStyles.html" title="SetLineStyles"><span class="refentrytitle">SetLineStyles</span></a> and <a class="xref" href="SetPointShapes.html" title="SetPointShapes"><span class="refentrytitle">SetPointShapes</span></a>
+for details.
+</p><p>
+For error-bar plots with data type 'data-data-error' only:
+Error bar colors for each line are set with <a class="xref" href="SetErrorBarColors.html" title="SetErrorBarColors"><span class="refentrytitle">SetErrorBarColors</span></a>.
+Error bar shape (tee or line) is set with <a class="xref" href="SetErrorBarShape.html" title="SetErrorBarShape"><span class="refentrytitle">SetErrorBarShape</span></a>.
+If tee-shaped error bars are used, the width of the
+upper and lower 'tee' is set with <a class="xref" href="SetErrorBarSize.html" title="SetErrorBarSize"><span class="refentrytitle">SetErrorBarSize</span></a>.
+Error bar line width is set with <a class="xref" href="SetErrorBarLineWidth.html" title="SetErrorBarLineWidth"><span class="refentrytitle">SetErrorBarLineWidth</span></a>.
+</p><p>
+An example of this plot type can be seen in
+<a class="xref" href="ex-linepoints1.html#example-linepoints1" title="Example 5.7. Line/Point Plot, Point Shapes">Example 5.7, &#8220;Line/Point Plot, Point Shapes&#8221;</a>.
+</p></div><div class="sect2" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="plottype-lines"></a>3.4.4. Plot Type: lines (Lines Graph)</h3></div></div></div><p>
+This plot type simply draws a line from each point to the next.
+</p><p>
+This plot type works with data types 'text-data' and 'data-data'
+(see <a class="xref" href="conc-datatypes.html#conc-datatypes-types" title="3.3.1. Available Data Types">Section 3.3.1, &#8220;Available Data Types&#8221;</a>).
+It also works with 'data-data-error' for error bars.
+</p><p>
+Line colors for each line are set with <a class="xref" href="SetDataColors.html" title="SetDataColors"><span class="refentrytitle">SetDataColors</span></a>.
+Line widths for each line are set with <a class="xref" href="SetLineWidths.html" title="SetLineWidths"><span class="refentrytitle">SetLineWidths</span></a>.
+Line styles (solid or dashed) for each line are set with
+<a class="xref" href="SetLineStyles.html" title="SetLineStyles"><span class="refentrytitle">SetLineStyles</span></a>.
+</p><p>
+For error-bar plots with data type 'data-data-error' only:
+Error bar colors for each line are set with <a class="xref" href="SetErrorBarColors.html" title="SetErrorBarColors"><span class="refentrytitle">SetErrorBarColors</span></a>.
+Error bar shape (tee or line) is set with <a class="xref" href="SetErrorBarShape.html" title="SetErrorBarShape"><span class="refentrytitle">SetErrorBarShape</span></a>.
+If tee-shaped error bars are used, the width of the
+upper and lower 'tee' is set with <a class="xref" href="SetErrorBarSize.html" title="SetErrorBarSize"><span class="refentrytitle">SetErrorBarSize</span></a>.
+Error bar line width is set with <a class="xref" href="SetErrorBarLineWidth.html" title="SetErrorBarLineWidth"><span class="refentrytitle">SetErrorBarLineWidth</span></a>.
+</p><p>
+Examples of this plot type can be seen in
+<a class="xref" href="examples.html#example-lines1" title="Example 5.1. Line Plot">Example 5.1, &#8220;Line Plot&#8221;</a> and
+<a class="xref" href="ex-lines2.html#example-lines2" title="Example 5.2. Line Plot: Functions">Example 5.2, &#8220;Line Plot: Functions&#8221;</a>.
+</p></div><div class="sect2" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="plottype-pie"></a>3.4.5. Plot Type: pie (Pie Chart)</h3></div></div></div><p>
+This plot type draws pie charts. The pie chart can have a 3-D look or be
+drawn flat.
+The first pie segment starts at 0 degrees (East, or 3:00PM) and they go around
+the pie in a counter-clockwise direction.
+Each segment is labeled with its percentage.
+</p><p>
+This plot type works with data types 'text-data', 'data-data', and
+'text-data-single' (see <a class="xref" href="conc-datatypes.html#conc-datatypes-types" title="3.3.1. Available Data Types">Section 3.3.1, &#8220;Available Data Types&#8221;</a>).
+Data arrays for pie charts are handled differently than with other plot types,
+so the data types are described in more detail below.
+</p><p>
+If shading is on with <a class="xref" href="SetShading.html" title="SetShading"><span class="refentrytitle">SetShading</span></a> (default is on with value
+5 pixels), then the pie chart has a 3-D look. If shading is off
+(<code class="function">SetShading(0)</code>), the pie chart is drawn flat (circular
+rather than oval).
+The position of the segment percentage labels is set with
+<a class="xref" href="SetLabelScalePosition.html" title="SetLabelScalePosition"><span class="refentrytitle">SetLabelScalePosition</span></a>.
+</p><p>
+Examples of this plot type can be seen in
+<a class="xref" href="ex-pie1.html#example-pie1" title="Example 5.8. Pie Chart, text-data-single">Example 5.8, &#8220;Pie Chart, text-data-single&#8221;</a> (text-data-single),
+<a class="xref" href="ex-pie2.html#example-pie2" title="Example 5.9. Pie Chart, text-data">Example 5.9, &#8220;Pie Chart, text-data&#8221;</a> (text-data), and
+<a class="xref" href="ex-pie3.html#example-pie3" title="Example 5.10. Pie Chart, flat with options">Example 5.10, &#8220;Pie Chart, flat with options&#8221;</a> (unshaded).
+</p><div class="sect3" lang="en" xml:lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="plottype-pie-tds"></a>3.4.5.1. Pie Chart with data type: 'text-data-single'</h4></div></div></div><p>
+The data array for pie charts with 'text-data-single' data type is
+structured as follows.
+Each record in the data array represents a pie segment.
+The record is an array of 2 elements: label and value,
+but the label is ignored.
+The value sets the relative size of a pie segment.
+PHPlot totals up the values and computes the relative size of each segment.
+</p><p>
+For example:
+</p><pre class="programlisting">
+$data = array(array('', 1), array('',4), array('',5));
+</pre><p>
+This makes a pie chart with 3 segments, with sizes 10%, 40%, and 50%.
+</p></div><div class="sect3" lang="en" xml:lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="plottype-pie-td"></a>3.4.5.2. Pie Chart with data type: 'text-data'</h4></div></div></div><p>
+The data array for pie charts with 'text-data' data type is
+structured as follows.
+Each record in the data array is an array of a label followed by N data values.
+The label is ignored. The pie chart will be produced with N segments.
+The relative weight of the first segment is the sum of the first data values
+in each record.
+The relative weight of each subsequent segment is the sum of the corresponding
+data values in each record.
+</p><p>
+For example:
+</p><pre class="programlisting">
+$data = array(array('', 10, 10, 20, 10),
+              array('', 15, 10, 15, 10));
+</pre><p>
+This results in 4 segments with sizes 25%, 20%, 35%, and 20%.
+</p></div><div class="sect3" lang="en" xml:lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="plottype-pie-dd"></a>3.4.5.3. Pie Chart with data type: 'data-data'</h4></div></div></div><p>
+The data array for pie charts with 'data-data' data type is
+structured the same as 'text-data', except that the first
+two values in each record are ignored (the positions usually
+used for label and X value).
+Each element in the data array represents a record.
+Each record is an array of a label, X value, then N data values.
+The label and X value are ignored.
+The pie chart will be produced with N segments.
+The relative weight of the first segment is the sum of the first data values
+in each record.
+The relative weight of each subsequent segment is the sum of the corresponding
+data values in each record.
+</p><p>
+For example:
+</p><pre class="programlisting">
+$data = array(array('', 1, 10, 10, 20, 10),
+              array('', 2, 15, 10, 15, 10));
+</pre><p>
+This results in 4 segments with sizes 25%, 20%, 35%, and 20%.
+The empty strings and '1' and '2' are ignored.
+</p></div></div><div class="sect2" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="plottype-points"></a>3.4.6. Plot Type: points (Styled Dot Plot)</h3></div></div></div><p>
+This plot type draws a point marker at each X,Y value.
+</p><p>
+This plot type works with data types 'text-data' and 'data-data'
+(see <a class="xref" href="conc-datatypes.html#conc-datatypes-types" title="3.3.1. Available Data Types">Section 3.3.1, &#8220;Available Data Types&#8221;</a>).
+It also works with 'data-data-error' for points with error bars.
+</p><p>
+Marker colors for each line are set with <a class="xref" href="SetDataColors.html" title="SetDataColors"><span class="refentrytitle">SetDataColors</span></a>.
+Marker styles for each line are set with <a class="xref" href="SetPointShapes.html" title="SetPointShapes"><span class="refentrytitle">SetPointShapes</span></a>.
+Marker sizes for each line are set with <a class="xref" href="SetPointSizes.html" title="SetPointSizes"><span class="refentrytitle">SetPointSizes</span></a>.
+</p><p>
+For error-bar plots with data type 'data-data-error' only:
+Error bar colors for each line are set with <a class="xref" href="SetErrorBarColors.html" title="SetErrorBarColors"><span class="refentrytitle">SetErrorBarColors</span></a>.
+Error bar shape (tee or line) is set with <a class="xref" href="SetErrorBarShape.html" title="SetErrorBarShape"><span class="refentrytitle">SetErrorBarShape</span></a>.
+If tee-shaped error bars are used, the width of the
+upper and lower 'tee' is set with <a class="xref" href="SetErrorBarSize.html" title="SetErrorBarSize"><span class="refentrytitle">SetErrorBarSize</span></a>.
+Error bar line width is set with <a class="xref" href="SetErrorBarLineWidth.html" title="SetErrorBarLineWidth"><span class="refentrytitle">SetErrorBarLineWidth</span></a>.
+</p><p>
+Examples of this plot type can be seen in
+<a class="xref" href="ex-points2.html#example-points2" title="Example 5.12. Points Plot / Scatterplot">Example 5.12, &#8220;Points Plot / Scatterplot&#8221;</a> (scatterplot), and
+<a class="xref" href="ex-points1.html#example-points1" title="Example 5.11. Points Plot with Error Bars">Example 5.11, &#8220;Points Plot with Error Bars&#8221;</a> (with error bars).
+</p></div><div class="sect2" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="plottype-squared"></a>3.4.7. Plot Type: squared (Step Plot)</h3></div></div></div><p>
+This plot type makes stepped lines. For each point, you get a horizontal
+line from the previous point to the current X, then a vertical line to
+the current Y.
+</p><p>
+This plot type works with data types 'text-data' and 'data-data'
+(see <a class="xref" href="conc-datatypes.html#conc-datatypes-types" title="3.3.1. Available Data Types">Section 3.3.1, &#8220;Available Data Types&#8221;</a>).
+For 'text-data', the data X values are assumed to be at 0.5+N for N=0,1,2...
+</p><p>
+Line colors per line are set with <a class="xref" href="SetDataColors.html" title="SetDataColors"><span class="refentrytitle">SetDataColors</span></a>.
+Line widths per line are set with <a class="xref" href="SetLineWidths.html" title="SetLineWidths"><span class="refentrytitle">SetLineWidths</span></a>.
+Line style (solid or dashed) per line are set with
+<a class="xref" href="SetLineStyles.html" title="SetLineStyles"><span class="refentrytitle">SetLineStyles</span></a>.
+</p><p>
+An example of this plot type can be seen in
+<a class="xref" href="ex-squared1.html#example-squared1" title="Example 5.13. Squared Plot">Example 5.13, &#8220;Squared Plot&#8221;</a>.
+</p></div><div class="sect2" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="plottype-stackedbars"></a>3.4.8. Plot Type: stackedbars</h3></div></div></div><p>
+This plot type draws a bar chart with stacked bars centered on each X value.
+Each data set value contributes one segment of a stack.
+That is, the first data set is drawn at the X axis in the first
+color, then the second data set is drawn stacked above the first
+in the second color, etc.
+For this plot type, all Y data values must be greater than or equal to 0.
+Negative values are not supported.
+</p><p>
+This plot type only works with data type 'text-data'
+(see <a class="xref" href="conc-datatypes.html#conc-datatypes-types" title="3.3.1. Available Data Types">Section 3.3.1, &#8220;Available Data Types&#8221;</a>).
+The data X values are assumed to be at 0.5+N for N=0,1,2...
+</p><p>
+If shading is on with <a class="xref" href="SetShading.html" title="SetShading"><span class="refentrytitle">SetShading</span></a> (default is on with value
+5 pixels), then the bars have a 3-D look. If shading is off
+(<code class="function">SetShading(0)</code>), the bars are flat rectangles with borders.
+The filled rectangle colors for each stacked segment are set with
+<a class="xref" href="SetDataColors.html" title="SetDataColors"><span class="refentrytitle">SetDataColors</span></a>.
+The border color (if shading is off) can be set with
+<a class="xref" href="SetDataBorderColors.html" title="SetDataBorderColors"><span class="refentrytitle">SetDataBorderColors</span></a>.
+</p><p>
+Examples of this plot type can be seen in
+<a class="xref" href="ex-stackedbars1.html#example-stackedbars1" title="Example 5.14. Stacked Bars, Shaded">Example 5.14, &#8220;Stacked Bars, Shaded&#8221;</a> and
+<a class="xref" href="ex-stackedbars2.html#example-stackedbars2" title="Example 5.15. Stacked Bars, Shaded">Example 5.15, &#8220;Stacked Bars, Shaded&#8221;</a>.
+</p></div><div class="sect2" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="plottype-thinbarline"></a>3.4.9. Plot Type: thinbarline</h3></div></div></div><p>
+This plot type draws vertical lines up from the X axis to the Y value at
+each point.
+Other implementations call this type of plot 'impulses'.
+Plotting multiple data sets does not work, because the lines are drawn on
+top of each other and only one can typically be seen.
+</p><p>
+This plot type works with data types 'text-data' and 'data-data'
+(see <a class="xref" href="conc-datatypes.html#conc-datatypes-types" title="3.3.1. Available Data Types">Section 3.3.1, &#8220;Available Data Types&#8221;</a>).
+For 'text-data', the data X values are assumed to be at 0.5+N for N=0,1,2...
+</p><p>
+Impulse width can be controlled with <a class="xref" href="SetLineWidths.html" title="SetLineWidths"><span class="refentrytitle">SetLineWidths</span></a>.
+</p><p>
+Examples of this plot type can be seen in
+<a class="xref" href="ex-thinbarline1.html#example-thinbarline1" title="Example 5.16. Thin Bar Line">Example 5.16, &#8220;Thin Bar Line&#8221;</a> and
+<a class="xref" href="ex-thinbarline2.html#example-thinbarline2" title="Example 5.17. Thin Bar Line Plot, Wider Lines">Example 5.17, &#8220;Thin Bar Line Plot, Wider Lines&#8221;</a>.
+</p></div></div><div class="navfooter"><hr /><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="conc-datatypes.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="concepts.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="conc-colors.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">3.3. PHPlot Data Types </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> 3.5. Colors</td></tr></table></div></body></html>

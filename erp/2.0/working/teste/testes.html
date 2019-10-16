@@ -1,0 +1,67 @@
+<html>
+<head>
+    <script>
+        function append_me(obj, texto){
+            var newobj = document.createElement('div');
+            newobj.id  = 'newtipbox';
+            document.body.appendChild(newobj);
+
+            var myobj = document.getElementById("newtipbox");
+            myobj.style.position = "absolute";
+            myobj.style.top = obj.offsetTop;
+            
+            var txt = "<table border=0 cellspacing=0 cellpadding=0>";
+
+            txt += "<tr>";
+            txt += "<td width=15 height=17 style=\"background-image: url('tt_tl.png');background-repeat: no-repeat; height: 17px;\"></td>";
+            txt += "<td style=\"background-image: url('tt_tc.png');background-repeat: repeat-x;\"></td>";
+            txt += "<td width=15 height=17 style=\"background-image: url('tt_tr.png');background-repeat: no-repeat; height: 17px;\"></td>";
+            txt += "</tr>";
+            
+            txt += "<tr>";
+            txt += "<td align=right style=\"background-image: url('tt_lc.png');background-repeat: repeat-y;\">&nbsp;</td>";
+            txt += "<td style=\"background-image: url('tt_bg.png');\">" + texto + "</td>";
+            txt += "<td style=\"background-image: url('tt_rc.png');background-repeat: repeat-y;\">&nbsp;</td>";
+            txt += "</tr>";
+            
+            txt += "<tr>";
+            txt += "<td width=15 height=17 style=\"background-image: url('tt_bl.png');background-repeat: no-repeat;\">&nbsp;</td>";
+            txt += "<td style=\"background-image: url('tt_bc.png');background-repeat: repeat-x;\">&nbsp;</td>";
+            txt += "<td width=15 height=17 style=\"background-image: url('tt_rb.png');background-repeat: no-repeat;\">&nbsp;</td>";
+            txt += "</tr>";
+            
+            txt += "</table>";
+            
+            document.onmousemove = function( e ) {
+                var oEvt = e || window.event;
+                this.screenX = oEvt.screenX;
+                this.screenY = oEvt.screenY;
+                this.clientX = oEvt.clientX;
+                this.clientY = oEvt.clientY;
+                myobj.style.left = this.clientX + 20;
+            }
+            myobj.innerHTML = txt;//"<div style=\"color: #ffffff;background-color: #000000;\">TEXTO<BR>dfdfdffd</div>";
+        }
+        
+        function unappend_me(){
+            var elem = document.getElementById('newtipbox');
+            if(typeof(elem) == 'object'){
+                try{
+                    document.body.removeChild(elem);
+                }catch(err){
+                    //document.getElementById("debug").value = err.description;
+                }
+            }else{
+                alert(typeof(elem));
+            }
+        }
+    </script>
+</head>
+<body bgcolor="#006633">
+    <input type='text' name='mtext' id='mtext' onmouseover="append_me(this, 'Teste 1<BR>New Line<BR>BR');" onmouseout="unappend_me();">
+    <BR>
+    <input type='text' id=debug>
+    <BR>
+    <input type='text' name='mtext2' id='mtext2' onmouseover="append_me(this, 'puta que o pariu de 4!');" onmouseout="unappend_me();">
+</body>
+</html>

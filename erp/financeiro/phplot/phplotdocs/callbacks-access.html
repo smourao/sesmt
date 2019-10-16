@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /><title>9.2. Callback Function Access</title><link rel="stylesheet" href="phplotdoc.css" type="text/css" /><meta name="generator" content="DocBook XSL Stylesheets V1.73.2" /><link rel="start" href="index.html" title="PHPlot Reference Manual" /><link rel="up" href="callbacks.html" title="Chapter 9. Callbacks" /><link rel="prev" href="callbacks.html" title="Chapter 9. Callbacks" /><link rel="next" href="callbacks-names.html" title="9.3. Available Callbacks" /></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">9.2. Callback Function Access</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="callbacks.html">Prev</a> </td><th width="60%" align="center">Chapter 9. Callbacks</th><td width="20%" align="right"> <a accesskey="n" href="callbacks-names.html">Next</a></td></tr></table><hr /></div><div class="sect1" lang="en" xml:lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="callbacks-access"></a>9.2. Callback Function Access</h2></div></div></div><p>
+By default, the callback function has access only to the GD image resource
+as the $img argument, the pass-through argument provided when the callback
+function was registered, and additional arguments (if any) provided by
+PHPlot for the callback. It does not have access to the PHPlot
+class object instance, nor any of its contents.
+</p><p>
+If you feel you need access to the internals of the PHPlot class instance,
+you have two options. First, you can pass the instance variable as the $arg
+when registering the callback. With PHP5 this will pass a reference to
+the object, which allows reading and changing variables. (PHP4 would pass
+a copy of the object at the time the callback function is being set up,
+which would probably not be useful. There are work-arounds, but PHP4 is no
+longer supported.)
+</p><p>
+The second option is to use a class method.
+This is described in <a class="xref" href="callbacks-objects.html" title="9.4. Object Methods as Callbacks">Section 9.4, &#8220;Object Methods as Callbacks&#8221;</a>.
+</p><p>
+As stated in the warning at the top of this chapter, any access to the class
+internals is risky and subject to break with any new update to PHPlot.
+</p></div><div class="navfooter"><hr /><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="callbacks.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="callbacks.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="callbacks-names.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Chapter 9. Callbacks </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> 9.3. Available Callbacks</td></tr></table></div></body></html>

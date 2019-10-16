@@ -1,0 +1,205 @@
+STEP 1 - Seleção de Clientes;
+
+STEP 2 - Seleção de setores, jornada e ano;
+
+STEP 3 - Lista de funcionários;
+
+STEP 4 - Pavimentos e escadas;
+
+STEP 5 - Seleção de setores;
+
+STEP 6 - Edificação, ventilação, piso, iluminação, parede e cobertura;
+ --> Tipo de edificação;
+ --> Ventilação natural;
+ --> Ventilação artificial;
+ --> Tipo de piso;
+ --> Iluminação natural;
+ --> Iluminação artificial;
+ --> Tipo de parede;
+ --> Tipo de cobertura;
+
+
+STEP 8 - Iluminação do Setor, por mesa;
+ --> Luz atual;
+ --> tempo exposição;
+ --> Recomendado;
+ --> Movel;
+ --> Funcionário;
+ --> Aparelho;
+
+STEP 9 - Agentes Nocivos
+ --> Risco do setor;
+ --> Fonte geradora;
+ --> DIagnôstico;
+ --> Tipo de Exposição;
+ --> Contato com agente;
+ --> Nivel de Ação;
+ --> Grau de intensidade;
+ --> Danos à saude;
+ --> Escala de ação;
+ --> Medidas preventivas;
+ --> Possibilidades de acidentes;
+ --> Medidas corretivas;
+
+STEP 10 - Medidas Preventivas
+
+STEP 11 - Cadastro de EPC
+ --> EPC existente;
+ --> EPC sugerido;
+ --> EPC eficaz;
+ --> Cerificado de Aprovação;
+
+STEP 12 - Extintores de incêndio
+ --> Existente ou sugerido;
+ --> Tipo de extintor;
+ --> Quantidade;
+ --> Data da recarga;
+ --> Número do cilindro;
+ --> Venc ABNT;
+ --> Próx Carga;
+ --> Placa de SInalização;
+ --> Demarcação do solo;
+ --> Tipo de instalação;
+ --> Ficha de inspeção;
+ --> Empresa prestadora de serviços;
+
+STEP 13 - Cadastro de Mangueiras
+ --> Tipo de hidrante;
+ --> Est. do abrigo;
+ --> Capacidade;
+ --> Registro;
+ --> Quantidade de mangueiras;
+ --> Repor Mangueiras;
+ --> Quantidade;
+ --> Data vistoria;
+ --> Estado Mangueira;
+ --> Esguicho;
+ --> Quantidade de esguicho;
+ --> Chave stors;
+ --> Sinalização;
+ --> Demarcação;
+ --> Porta corta fogo;
+ --> Quantidade de porta corta fogo;
+ --> Para raio;
+ --> QUantidade para raio;
+ --> Sistema fixo contra incêndio;
+ --> Alarme contra incêndio;
+ --> Sprinkler;
+ --> Quantidade de Bulbos;
+
+STEP 14 - Placas de Sinalização
+
+STEP 15 - Relatórios
+
+
+
+
+
+
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------
+
+
+STEP 6 - Edificação
+ --> Tipo de edificação;
+ --> Tipo de piso;
+ --> Ventilação natural;
+ --> Ventilação artificial;
+ --> Tipo de parede;
+ --> Tipo de cobertura;
+Condição da Edificação:
+ --> Pé direito;
+ --> N pavimentos;
+ --> Frente;
+ --> Comp.;
+ --> Aparelho;
+Ruído:
+ --> Ruído de fundo;
+ --> R. de operação;
+ --> Aparelho;
+Temperatura:
+ --> Calor;
+ --> Umidade;
+ --> Aparelho;
+
+
+STEP 7 - Iluminância
+ --> Iluminação natural;
+ --> Iluminação artificial;
+ --> Luz atual;
+ --> tempo exposição;
+ --> Recomendado;
+ --> Movel;
+ --> Funcionário;
+ --> Aparelho;
+
+STEP 8 - Agentes Nocivos
+ --> Risco do setor;
+ --> Fonte geradora;
+ --> DIagnôstico;
+ --> Tipo de Exposição;
+ --> Contato com agente;
+ --> Nivel de Ação;
+ --> Grau de intensidade;
+ --> Danos à saude;
+ --> Escala de ação;
+ --> Medidas preventivas;
+ --> Possibilidades de acidentes;
+ --> Medidas corretivas;
+
+STEP 9 - Medidas Preventivas
+
+STEP 10 - Cadastro de EPC
+ --> EPC existente;
+ --> EPC sugerido;
+ --> EPC eficaz;
+ --> Cerificado de Aprovação;
+
+STEP 11 - Extintores de incêndio
+ --> Existente ou sugerido;
+ --> Tipo de extintor;
+ --> Quantidade;
+ --> Data da recarga;
+ --> Número do cilindro;
+ --> Venc ABNT;
+ --> Próx Carga;
+ --> Placa de SInalização;
+ --> Demarcação do solo;
+ --> Tipo de instalação;
+ --> Ficha de inspeção;
+ --> Empresa prestadora de serviços;
+
+STEP 12 - Cadastro de Mangueiras
+ --> Tipo de hidrante;
+ --> Est. do abrigo;
+ --> Capacidade;
+ --> Registro;
+ --> Quantidade de mangueiras;
+ --> Repor Mangueiras;
+ --> Quantidade;
+ --> Data vistoria;
+ --> Estado Mangueira;
+ --> Esguicho;
+ --> Quantidade de esguicho;
+ --> Chave stors;
+ --> Sinalização;
+ --> Demarcação;
+ --> Porta corta fogo;
+ --> Quantidade de porta corta fogo;
+ --> Para raio;
+ --> QUantidade para raio;
+ --> Sistema fixo contra incêndio;
+ --> Alarme contra incêndio;
+ --> Sprinkler;
+ --> Quantidade de Bulbos;
+
+STEP 13 - Placas de Sinalização
+
+ --> Data da avaliação;
+ --> Hora da avaliação;
+
+
+

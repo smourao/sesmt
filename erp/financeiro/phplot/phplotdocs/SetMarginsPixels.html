@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /><title>SetMarginsPixels</title><link rel="stylesheet" href="phplotdoc.css" type="text/css" /><meta name="generator" content="DocBook XSL Stylesheets V1.73.2" /><link rel="start" href="index.html" title="PHPlot Reference Manual" /><link rel="up" href="reference.html" title="PHPlot Function Reference" /><link rel="prev" href="SetLineWidths.html" title="SetLineWidths" /><link rel="next" href="SetNumberFormat.html" title="SetNumberFormat" /></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">SetMarginsPixels</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="SetLineWidths.html">Prev</a> </td><th width="60%" align="center">PHPlot Function Reference</th><td width="20%" align="right"> <a accesskey="n" href="SetNumberFormat.html">Next</a></td></tr></table><hr /></div><div class="refentry" lang="en" xml:lang="en"><a id="SetMarginsPixels"></a><div class="titlepage"></div><div class="refnamediv"><h2><span class="refentrytitle">SetMarginsPixels</span></h2><p>SetMarginsPixels &#8212; Set margins around the plot area</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><pre class="synopsis">
+$plot-&gt;SetMarginsPixels(<em class="parameter"><code>$lm</code></em>, <em class="parameter"><code>$rm</code></em>, <em class="parameter"><code>$tm</code></em>, <em class="parameter"><code>$bm</code></em>)
+    </pre></div><div class="refsect1" lang="en" xml:lang="en"><a id="id2571200"></a><h2>Description</h2><p>
+<code class="function">SetMarginsPixels</code> sets the margins around the plot area,
+overriding the automatic margin size calculation.
+The four margins are specified independently and in pixels.
+    </p></div><div class="refsect1" lang="en" xml:lang="en"><a id="id2571218"></a><h2>Parameters</h2><div class="variablelist"><dl><dt><span class="term"><em class="replaceable"><code>$lm</code></em></span></dt><dd><p>
+The left margin, in pixels.
+          </p></dd><dt><span class="term"><em class="replaceable"><code>$rm</code></em></span></dt><dd><p>
+The right margin, in pixels.
+          </p></dd><dt><span class="term"><em class="replaceable"><code>$tm</code></em></span></dt><dd><p>
+The top margin, in pixels.
+          </p></dd><dt><span class="term"><em class="replaceable"><code>$bm</code></em></span></dt><dd><p>
+The bottom margin, in pixels.
+          </p></dd></dl></div></div><div class="refsect1" lang="en" xml:lang="en"><a id="id2571287"></a><h2>Notes</h2><p>
+By default, the margin sizes are automatically calculated based on the
+amount of room needed (for the axis labels, tick labels, and tick marks).
+    </p><p>
+The upper left corner of the plot area is at device coordinates
+(Left_Margin, Top_Margin).
+The lower right corner of the plot area is at device coordinates
+(Image_Width - Right_Margin, Image_Height - Bottom_Margin).
+    </p><p>
+Calling <code class="function">SetMarginsPixels</code> causes PHPlot to forget
+a plot area set with <a class="xref" href="SetPlotAreaPixels.html" title="SetPlotAreaPixels"><span class="refentrytitle">SetPlotAreaPixels</span></a>.
+    </p></div></div><div class="navfooter"><hr /><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="SetLineWidths.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="reference.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="SetNumberFormat.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">SetLineWidths </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> SetNumberFormat</td></tr></table></div></body></html>

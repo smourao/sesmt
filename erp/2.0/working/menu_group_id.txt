@@ -1,0 +1,17 @@
+00 - Medicina do Tranalho
+01 - Engenharia de Segurança
+02 - Recepção
+03 - Comercial
+04 - Relatórios
+05 - Cadastros
+
+------
+
+06 - Estatísticas
+07 - Administração
+08 - Financeiro
+09 - Administração do site
+10 - Edificação
+11 - Setorial
+12 - Pesquisas
+13 - Medida Preventiva

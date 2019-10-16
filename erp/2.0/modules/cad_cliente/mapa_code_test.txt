@@ -1,0 +1,85 @@
+
+<script type="text/javascript">
+  //<![CDATA[
+    var map;
+    var geocoder;
+
+    function load() {
+      map = new GMap2(document.getElementById("map"));
+      map.setCenter(new GLatLng(23, 48), 15);
+      map.setUIToDefault();
+      geocoder = new GClientGeocoder();
+	  findLocation("<?PHP echo $buffer[endereco].", ".$buffer[num_end].", ".$buffer[bairro];?>");
+    }
+
+    // addAddressToMap() is called when the geocoder returns an
+    // answer.  It adds a marker to the map with an open info window
+    // showing the nicely formatted version of the address and the country code.
+    function addAddressToMap(response) {
+      map.clearOverlays();
+      if (!response || response.Status.code != 200) {
+        alert("Desculpe, Não foi possível encontrar a localização informada!\n\nTente refazer a busca sem a informação do bairro, por exemplo.\n\nA consulta pode ser editada na caixa com o endereço abaixo.");
+      } else {
+        place = response.Placemark[0];
+        point = new GLatLng(place.Point.coordinates[1],
+                            place.Point.coordinates[0]);
+        marker = new GMarker(point);
+        map.addOverlay(marker);
+        marker.openInfoWindowHtml(
+        '<font color=black><center><b><?PHP echo $buffer[razao_social];?></b></center><BR>'
+        + '<b>Localizado:</b> '
+        + place.address + '<br>'
+        + '<b>Busca por:</b> '
+        + document.forms[0].q.value
+        + '</font>'
+        );
+
+        //marker.openInfoWindowHtml(place.address + '<br>' + '<b>Country code:</b> ' + place.AddressDetails.Country.CountryNameCode);
+
+        /*
+        marker.openInfoWindowHtml('<center><b><?PHP echo $buffer[razao_social];?></b></center>'
+         + '<br>'
+         + '<b>Endereço:</b> '
+         + '<?PHP echo $buffer[endereco].", ".$buffer[num_end].", ".$buffer[bairro];?>'
+         );
+         */
+      }
+    }
+
+    // showLocation() is called when you click on the Search button
+    // in the form.  It geocodes the address entered into the form
+    // and adds a marker to the map at that location.
+    function showLocation() {
+      var address = document.forms[0].q.value;
+      geocoder.getLocations(address, addAddressToMap);
+    }
+
+   // findLocation() is used to enter the sample addresses into the form.
+    function findLocation(address) {
+      document.forms[0].q.value = address;
+      showLocation();
+    }
+
+
+
+       /*
+        function initialize() {
+              var map = new GMap2(document.getElementById("map"));
+              //map.setCenter(new GLatLng(37.4419, -122.1419), 13);
+              map.setCenter(new GLatLng(23, 48), 14);
+              map.setMapType(G_HYBRID_MAP);
+              map.setUIToDefault();
+              geocoder = new GClientGeocoder();
+              findLocation("Jardim América, Rio de Janeiro");
+        }  */
+
+                 /*
+                  * G_NORMAL_MAP- a visualização padrão
+                  * G_SATELLITE_MAP - mostrando imagens de satélite do Google Earth
+                  * G_HYBRID_MAP - mostrando uma mistura entre as visualizações normal e de satélite
+                  * G_DEFAULT_MAP_TYPES - uma matriz desses três tipos, muito útil no processamento iterativo
+                  */
+
+
+       //]]>
+    </script>

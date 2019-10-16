@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /><title>3.5. Colors</title><link rel="stylesheet" href="phplotdoc.css" type="text/css" /><meta name="generator" content="DocBook XSL Stylesheets V1.73.2" /><link rel="start" href="index.html" title="PHPlot Reference Manual" /><link rel="up" href="concepts.html" title="Chapter 3. PHPlot Concepts" /><link rel="prev" href="conc-plottypes.html" title="3.4. PHPlot Plot Types" /><link rel="next" href="conc-labels.html" title="3.6. Labels" /></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">3.5. Colors</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="conc-plottypes.html">Prev</a> </td><th width="60%" align="center">Chapter 3. PHPlot Concepts</th><td width="20%" align="right"> <a accesskey="n" href="conc-labels.html">Next</a></td></tr></table><hr /></div><div class="sect1" lang="en" xml:lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="conc-colors"></a>3.5. Colors</h2></div></div></div><div class="abstract"><p class="title"><b>Abstract</b></p><p>
+This section contains information about using colors in PHPlot.
+Functions described in <a class="xref" href="ref-colorstyle.html" title="4.3. Colors and Line Styles">Section 4.3, &#8220;Colors and Line Styles&#8221;</a> in the Reference
+chapter control the use of colors in PHPlot.
+  </p></div><div class="sect2" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="conc-colors-forms"></a>3.5.1. Color Parameter Forms</h3></div></div></div><p>
+Individual colors as arguments to PHPlot functions can take one of the
+following forms:
+</p><div class="orderedlist"><ol type="1"><li><p>
+A color name, as defined by <a class="xref" href="SetRGBArray.html" title="SetRGBArray"><span class="refentrytitle">SetRGBArray</span></a> or from a built-in
+color map if SetRGBArray was not called.
+Note that color names are case sensitive.
+    </p></li><li><p>
+Numeric color component values, in the form <code class="literal">#rrggbb</code>.
+Here rr is red, gg is green, and bb is blue, and each component
+value is represented as a 2-digit hexadecimal number between 00 and ff.
+For example, <code class="literal">#0000ff</code> is full-saturation blue.
+    </p></li><li><p>
+A PHP array of red, green, and blue color component values, each value
+being in the range 0 to 255 inclusive, for example
+<code class="literal">array(0,0,255)</code> for blue.
+    </p></li></ol></div><p>
+</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>
+You cannot use the (red, green, blue) array form as a color value in those
+functions (like <a class="xref" href="SetDataColors.html" title="SetDataColors"><span class="refentrytitle">SetDataColors</span></a>) which accept either a
+single color or an array of colors. The functions are unable to distinguish
+between an array of colors and a single color represented as an array.
+  </p></div></div><div class="sect2" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="conc-colors-map"></a>3.5.2. Built-in Color Maps</h3></div></div></div><p>
+There are 36 colors defined in the 'small' internal color map.
+This is the set of colors available by default, unless
+<a class="xref" href="SetRGBArray.html" title="SetRGBArray"><span class="refentrytitle">SetRGBArray</span></a> is used to load in a different color map.
+The colors and their names are shown in the figure below.
+  </p><div class="informalfigure"><div class="mediaobject"><img src="images/colors.png" alt="The 36 color 'small' color map" /></div></div><p>
+</p><p>
+Here are the color names again, in case the above figure is unavailable.
+
+</p><div class="informaltable"><table summary="Color names" border="0"><colgroup><col /><col /><col /><col /><col /><col /></colgroup><tbody><tr><td>DarkGreen</td><td>DimGrey</td><td>PeachPuff</td><td>SkyBlue</td><td>SlateBlue</td><td>YellowGreen</td></tr><tr><td>aquamarine1</td><td>azure1</td><td>beige</td><td>black</td><td>blue</td><td>brown</td></tr><tr><td>cyan</td><td>gold</td><td>gray</td><td>green</td><td>grey</td><td>ivory</td></tr><tr><td>lavender</td><td>magenta</td><td>maroon</td><td>navy</td><td>orange</td><td>orchid</td></tr><tr><td>peru</td><td>pink</td><td>plum</td><td>purple</td><td>red</td><td>salmon</td></tr><tr><td>snow</td><td>tan</td><td>violet</td><td>wheat</td><td>white</td><td>yellow</td></tr></tbody></table></div><p>
+</p><p>
+The color names and values in the 'small' internal color map are
+selected from the X11 RGB Color Database.
+If you use <a class="xref" href="SetRGBArray.html" title="SetRGBArray"><span class="refentrytitle">SetRGBArray</span></a> to pick the 'large' color map,
+PHPlot loads a much larger list of colors equivalent to the entire
+X11 RGB Color Database. Note that there are some duplicate colors in the
+maps, as they include alternate spellings (like 'gray' and 'grey').
+</p></div><div class="sect2" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="conc-colors-datacolors"></a>3.5.3. Plotting Colors</h3></div></div></div><p>
+Each data set plotted on a graph uses the next color in the Data Colors list.
+By default, the Data Colors list contains the following eight colors in order:
+SkyBlue green orange blue orange red violet azure1
+</p><p>
+If plotting more than four data sets, you should use
+<a class="xref" href="SetDataColors.html" title="SetDataColors"><span class="refentrytitle">SetDataColors</span></a> to define your own data colors list.
+Otherwise you will get two data sets plotted in the same color, orange.
+(This might be a bug.)
+</p></div><div class="sect2" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="conc-colors-transparent"></a>3.5.4. Transparency</h3></div></div></div><p>
+You can designate one color in the color map to be transparent.
+This is most often used to make a plot with a transparent background.
+Use <a class="xref" href="SetTransparentColor.html" title="SetTransparentColor"><span class="refentrytitle">SetTransparentColor</span></a> to designate the color,
+and <a class="xref" href="SetBackgroundColor.html" title="SetBackgroundColor"><span class="refentrytitle">SetBackgroundColor</span></a> to use that color for the background.
+Use a color which is not otherwise used in the plot.
+</p><p>
+For transparency to work, the output format (see <a class="xref" href="SetFileFormat.html" title="SetFileFormat"><span class="refentrytitle">SetFileFormat</span></a>)
+must support transparency, and the the user's viewer or browser also must
+support transparency.
+If transparency is not supported, the user will see the actual color
+which was designated as transparent (so don't use red, for example).
+Most viewers support transparency in GIF format, and newer viewers should
+support transparency in PNG format.  JPEG format does not support
+transparency.
+</p></div></div><div class="navfooter"><hr /><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="conc-plottypes.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="concepts.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="conc-labels.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">3.4. PHPlot Plot Types </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> 3.6. Labels</td></tr></table></div></body></html>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /><title>9.4. Object Methods as Callbacks</title><link rel="stylesheet" href="phplotdoc.css" type="text/css" /><meta name="generator" content="DocBook XSL Stylesheets V1.73.2" /><link rel="start" href="index.html" title="PHPlot Reference Manual" /><link rel="up" href="callbacks.html" title="Chapter 9. Callbacks" /><link rel="prev" href="callbacks-names.html" title="9.3. Available Callbacks" /><link rel="next" href="changelog.html" title="Appendix A. Change Log" /></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">9.4. Object Methods as Callbacks</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="callbacks-names.html">Prev</a> </td><th width="60%" align="center">Chapter 9. Callbacks</th><td width="20%" align="right"> <a accesskey="n" href="changelog.html">Next</a></td></tr></table><hr /></div><div class="sect1" lang="en" xml:lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="callbacks-objects"></a>9.4. Object Methods as Callbacks</h2></div></div></div><p>
+The callback function argument to <a class="xref" href="SetCallback.html" title="SetCallback"><span class="refentrytitle">SetCallback</span></a>
+can be an array of two elements: a class variable and a method.
+This can be used with any class, but here we are interested in using an
+extension of the PHPlot class.
+Consider the following setup:
+</p><p>
+  </p><pre class="programlisting">
+class my_PHPlot extends PHPlot
+{
+  function my_PHPlot($width=600, $height=400, $outfile=NULL, $infile=NULL)
+  {
+    $this-&gt;PHPlot($width, $height, $outfile, $infile);
+  }
+
+  function callback($img, $arg)
+  {
+    fwrite(STDERR, "callback in object\n");
+    fwrite(STDERR, "Plot area: ({$this-&gt;plot_area[0]}, {$this-&gt;plot_area[1]}) :");
+    fwrite(STDERR, " ({$this-&gt;plot_area[2]}, {$this-&gt;plot_area[2]})\n");
+  }
+}
+  </pre><p>
+</p><p>
+We define a class which extends PHPlot, and a method 'callback' which
+displays the plot area using the internal PHPlot class variable plot_area.
+(Note we are using a PHP4-style constructor, which also works with PHP5.
+You can use the PHP5 constructor method instead.)
+</p><p>
+We will then create an instance of the extended class, and set a callback.
+  </p><pre class="programlisting">
+$plot = new my_PHPlot(400,300);
+$plot-&gt;SetCallback('draw_titles', array($plot, 'callback'));
+  </pre><p>
+This is for PHP5. For PHP4, you need to use a reference to the $plot instance.
+Note that PHP4 is no longer supported.
+</p><p>
+When the draw_titles callback is triggered, it will call the 'callback'
+method inside our extended class. Because this is an extension of the
+PHPlot class, it has access to all the member variables via $this.
+</p></div><div class="navfooter"><hr /><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="callbacks-names.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="callbacks.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="changelog.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">9.3. Available Callbacks </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> Appendix A. Change Log</td></tr></table></div></body></html>

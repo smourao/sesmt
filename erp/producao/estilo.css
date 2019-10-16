@@ -1,0 +1,366 @@
+.body
+{
+	background-color: #FFFFFF;
+}
+
+.FontBasicP1
+{
+  Font-Family: Verdana, Tahoma;
+  Font-Size: 10px;
+  Color: #000000;
+}
+
+.HomeBorder
+{
+  Border: 1 solid;
+	border-top: 0;
+	border-top-color: #FFFFFF; 
+	border-bottom-color: #D4D4D4;
+	border-right-color: #F5F5F5; 
+	border-left-color: #D4D4D4;
+}
+
+.NTD { 
+	font-family: Tahoma, Verdana; 
+	font-size: 11; 
+	color:000000; 
+	border: 1 solid; 
+	background: #FFFFFF; 
+	border-top-color: #F7F7F7; 
+	border-bottom-color: #DFDFDF; 
+	border-left-color: #F7F7F7; 
+	border-right-color: #DFDFDF;
+}
+
+.NTDTipos { 
+	font-family: Tahoma, Verdana;
+	font-size: 11; 
+	color:000000; 
+	border: 1 solid; 
+	background: #f3f3f3; 
+	border-top-color: #F5F5F5; 
+	border-bottom-color: #D4D4D4;
+	border-left-color: #F5F5F5; 
+	border-right-color: #D4D4D4;
+}
+
+.FontBasicP {
+ font-family: tahoma, verdana;
+ font-size: 10px;
+ }
+ 
+ .FontBasicP2 {
+ font-family: tahoma, verdana;
+ font-size: 11px;
+ }
+
+.FontBasicB {
+ font-family: verdana, tahoma;
+ font-size: 10px;
+ color: #FFFFFF;
+ }
+ 
+ .FontBasicB2 {
+ font-family: tahoma, verdana;
+ font-size: 11px;
+ color: #FFFFFF;
+ }
+
+.Buttons:link
+{
+	font-size: 11; 
+    WIDTH: 100%;
+	HEIGHT: 100%;
+    COLOR: #000000;
+    TEXT-DECORATION: none;
+	font-family: Tahoma, Verdana;
+	border: 1 solid; 
+	background: #F5F5F5; 
+	border-top-color: #D4D4D4; 
+	border-bottom-color: #D4D4D4;
+	border-left-color: #D4D4D4; 
+	border-right-color: #D4D4D4;
+	PADDING-TOP:2px;
+}
+
+.Buttons:visited
+{
+	font-size: 11; 
+    WIDTH: 100%;
+	HEIGHT: 100%;
+    COLOR: #000000;
+    TEXT-DECORATION: none;
+	font-family: Tahoma, Verdana;
+	border: 1 solid; 
+	background: #F5F5F5; 
+	border-top-color: #D4D4D4; 
+	border-bottom-color: #D4D4D4;
+	border-left-color: #D4D4D4; 
+	border-right-color: #D4D4D4;
+	PADDING-TOP:2px;
+}
+
+.Buttons:unknown
+{
+	font-size: 11; 
+    WIDTH: 100%;
+	HEIGHT: 100%;
+    COLOR: #000000;
+    TEXT-DECORATION: none;
+	font-family: Tahoma, Verdana;
+	border: 1 solid; 
+	background: #D4D4D4; 
+	border-top-color: #D4D4D4; 
+	border-bottom-color: #D4D4D4;
+	border-left-color: #D4D4D4; 
+	border-right-color: #D4D4D4;
+	PADDING-TOP:2px;
+}
+
+.Buttons:hover
+{
+	font-size: 11; 
+    WIDTH: 100%;
+	HEIGHT: 100%;
+    COLOR: #000000;
+    TEXT-DECORATION: none;
+	font-family: Tahoma, Verdana;
+	border: 1 solid; 
+	background: #F5F5F5; 
+	border-top-color: #999999; 
+	border-bottom-color: #999999;
+	border-left-color: #999999; 
+	border-right-color: #999999;
+	PADDING-TOP:2px;
+}
+
+.ButtonsSelecionado
+{
+	font-size: 11; 
+    WIDTH: 100%;
+	HEIGHT: 100%;
+    COLOR: #000000;
+    TEXT-DECORATION: none;
+	font-family: Tahoma, Verdana;
+	font-weight: bold;
+	border: 1 solid; 
+	background: #D5D5D5; 
+	border-top-color: #999999; 
+	border-bottom-color: #999999;
+	border-left-color: #999999; 
+	border-right-color: #999999;
+	PADDING-TOP:2px;
+}
+
+.InputText
+{
+    FONT-SIZE: 11px;
+    WIDTH: 220;
+    FONT-FAMILY: Tahoma,Verdana;
+	border:1 solid;
+	border-top-color: #000000; 
+	border-bottom-color: #000000; 
+	border-left-color: #000000; 
+	border-right-color: #000000;
+}
+
+.InputTextData
+{
+    FONT-SIZE: 11px;
+    FONT-FAMILY: Tahoma,Verdana;
+	border:1 solid;
+	border-top-color: #000000; 
+	border-bottom-color: #000000; 
+	border-left-color: #000000; 
+	border-right-color: #000000;
+}
+
+.InputCheck
+{
+    FONT-SIZE: 11px;
+    WIDTH: 15;
+    FONT-FAMILY: Tahoma,Verdana;
+	border:1 solid;
+	border-top-color: #D4D4D4; 
+	border-bottom-color: #D4D4D4; 
+	border-left-color: #D4D4D4; 
+	border-right-color: #D4D4D4;
+}
+
+.InputTextLogin
+{
+    FONT-SIZE: 11px;
+    WIDTH: 90%;
+    FONT-FAMILY: Tahoma,Verdana;
+	border:1 solid;
+	border-top-color: #D4D4D4; 
+	border-bottom-color: #D4D4D4; 
+	border-left-color: #D4D4D4; 
+	border-right-color: #D4D4D4;
+}
+
+
+.InputTextCadEMail
+{
+    FONT-SIZE: 11px;
+    WIDTH: 100%;
+    FONT-FAMILY: Tahoma,Verdana;
+	border:1 solid;
+	border-top-color: #F5B73C; 
+	border-bottom-color: #F5B73C; 
+	border-left-color: #F5B73C; 
+	border-right-color: #F5B73C;
+}
+
+.InputTextContato
+{
+    FONT-SIZE: 11px;
+    WIDTH: 100%;
+    FONT-FAMILY: Tahoma,Verdana;
+	background-color: #FDEDCE;
+	border:1 solid;
+	border-top-color: #F5B73C; 
+	border-bottom-color: #F5B73C; 
+	border-left-color: #F5B73C; 
+	border-right-color: #F5B73C;
+}
+
+.InputTextInclusao
+{
+    FONT-SIZE: 11px;
+    WIDTH: 200;
+    FONT-FAMILY: Tahoma,Verdana;
+	border:1 solid;
+	border-top-color: #F5B73C; 
+	border-bottom-color: #F5B73C; 
+	border-left-color: #F5B73C; 
+	border-right-color: #F5B73C;
+}
+
+.InputTextBGConsulta
+{
+    FONT-SIZE: 11px;
+    WIDTH: 100%;
+    FONT-FAMILY: Tahoma,Verdana;
+	Color: #A8A8A9;
+	border:1 solid;
+	border-top-color: #F5B73C; 
+	border-bottom-color: #F5B73C; 
+	border-left-color: #F5B73C; 
+	border-right-color: #F5B73C;
+}
+
+.InputTextUpLoad
+{
+    FONT-SIZE: 11px;
+    WIDTH: 400;
+    FONT-FAMILY: Tahoma,Verdana;
+	border:1 solid;
+	border-top-color: #F5B73C; 
+	border-bottom-color: #F5B73C; 
+	border-left-color: #F5B73C; 
+	border-right-color: #F5B73C;
+}
+
+.InputTextArea
+{
+    FONT-SIZE: 11px;
+    WIDTH: 95%;
+    FONT-FAMILY: Tahoma,Verdana;
+	border:1 solid;
+	border-top-color: #F5B73C; 
+	border-bottom-color: #F5B73C; 
+	border-left-color: #F5B73C; 
+	border-right-color: #F5B73C;
+}
+
+.InputTextAreaMail
+{
+    FONT-SIZE: 11px;
+    WIDTH: 100%;
+    FONT-FAMILY: Tahoma,Verdana;
+	border:1 solid;
+	border-top-color: #F5B73C; 
+	border-bottom-color: #F5B73C; 
+	border-left-color: #F5B73C; 
+	border-right-color: #F5B73C;
+}
+
+.InputButton { 
+	font-family: Tahoma, Verdana; 
+	font-size: 11px;
+	color:000000; 
+	border: 1 solid; 
+	background: #F5F5F5; 
+	border-top-color: #999999; 
+	border-bottom-color: #999999; 
+	border-left-color: #999999; 
+	border-right-color: #999999;
+}
+
+.BotaoComTexto { 
+	font-family: Tahoma, Verdana; 
+	font-size: 20px;
+	color:000000; 
+	border: 1 solid; 
+	background: #F5F5F5; 
+	border-top-color: #999999; 
+	border-bottom-color: #999999; 
+	border-left-color: #999999; 
+	border-right-color: #999999;
+}
+
+.link {
+	COLOR: #000000; TEXT-DECORATION: none;
+}
+.link:hover {
+	COLOR: darkgray; TEXT-DECORATION: none;
+}
+
+.TD { 
+	font-family: Tahoma, Verdana; 
+	font-size: 11px; 
+	color:000000; 
+	border: 1 solid; 
+	background: #FEFEFE; 
+	border-top-color: #D4D4D4; 
+	border-bottom-color: #D4D4D4; 
+	border-left-color: #D4D4D4; 
+	border-right-color: #D4D4D4;
+}
+
+.TD2 { 
+	font-family: Tahoma, Verdana; 
+	font-size: 11px; 
+	color:000000; 
+	border: 1 solid; 
+	background: #FFFFFF; 
+	border-top-color: #FF3300; 
+	border-bottom-color: #FFFFFFF; 
+	border-left-color: #FF3300; 
+	border-right-color: #FF3300;
+}
+
+.TDTipos { 
+	font-family: Tahoma, Verdana; 
+	font-size: 11px; 
+	color:000000; 
+	border: 1 solid; 
+	background: #FFF3F0; 
+	border-top-color: #FF3300; 
+	border-bottom-color: #FF3300; 
+	border-left-color: #FF3300; 
+	border-right-color: #FF3300;
+}
+
+.TDTiposCadEmail { 
+	font-family: Tahoma, Verdana; 
+	font-size: 11px; 
+	color:000000; 
+	border: 1 solid; 
+	background: #FDEDCE; 
+	border-top-color: #E5A018; 
+	border-bottom-color: #E5A018; 
+	border-left-color: #E5A018; 
+	border-right-color: #E5A018;
+}

@@ -1,0 +1,58 @@
+[SISTEMA]
+0 - Login sucessfull
+1 - Logout
+3 - Login error
+
+
+[CGRT]
+100 - Atualização de dados de funcionarios
+101 - Inclusão de funcionário
+102 - Inclusão de novo setor
+103 - Erro ao incluir novo setor
+104 - Erro ao incluir novo setor. Setor já existente!
+105 - Erro ao incluir novo funcionário
+106 - Exclusão de setor
+107 - Erro ao excluir setor
+108 - STEP10 - Dados atualizados sobre informações do relatório.
+109 - STEP10 - Erro ao atualizar dados sobre informações do relatório.
+110 - STEP4 - Atualização de dados complementares.
+111 - STEP4 - Erro ao atualizar dados complementares.
+112 - STEP7 - Novo posto de trabalho cadastrado.
+113 - STEP7 - Erro ao cadastrar posto de trabalho.
+114 - STEP7 - Posto de trabalho excluído.
+115 - STEP7 - Erro ao excluir posto de trabalho.
+116 - STEP7 - Posto de trabalho atualizado.
+117 - STEP7 - Erro ao atualizar posto de trabalho.
+118 - STEP12 - CGRT finalizado.
+119 - STEP12 - Falha ao finalizar CGRT.
+
+
+[CAD_CLIENTE]
+201 - Novo cadastro
+202 - Erro ao cadastrar cliente
+203 - Atualização de cadastro de cliente
+204 - Erro ao atualizar cadastro de cliente
+
+
+[CAD_PRODUTO]
+301 - Novo cadastro
+302 - Erro ao cadastrar produto
+303 - Atualização de produto
+304 - Erro ao atualizar produto
+305 - Produto excluído
+306 - Erro ao excluir produto
+307 - Exclusão de produto inexistente
+
+[ATA_CIPA]
+401 - Remover tópico de ata
+402 - Erro ao remover tópico
+403 - Ata excluida
+404 - Erro ao excluir ata
+405 - Nova ata da CIPA criada
+406 - Erro ao criar nova ata
+407 - Updata da ata done
+408 - Erro ao atualizar ata da cipa
+409 - Atualização de tópico de ata
+410 - Erro ao atualizar tópico
+411 - Novo tópico adicionado
+412 - Erro ao adicioinar novo topico

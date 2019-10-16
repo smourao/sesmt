@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /><title>SetDataBorderColors</title><link rel="stylesheet" href="phplotdoc.css" type="text/css" /><meta name="generator" content="DocBook XSL Stylesheets V1.73.2" /><link rel="start" href="index.html" title="PHPlot Reference Manual" /><link rel="up" href="reference.html" title="PHPlot Function Reference" /><link rel="prev" href="SetCallback.html" title="SetCallback" /><link rel="next" href="SetDataColors.html" title="SetDataColors" /></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">SetDataBorderColors</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="SetCallback.html">Prev</a> </td><th width="60%" align="center">PHPlot Function Reference</th><td width="20%" align="right"> <a accesskey="n" href="SetDataColors.html">Next</a></td></tr></table><hr /></div><div class="refentry" lang="en" xml:lang="en"><a id="SetDataBorderColors"></a><div class="titlepage"></div><div class="refnamediv"><h2><span class="refentrytitle">SetDataBorderColors</span></h2><p>SetDataBorderColors &#8212; Set the rectangle border color on bars and stacked bars</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><pre class="synopsis">
+$plot-&gt;SetDataBorderColors(<em class="parameter"><code>$border</code></em>)
+    </pre></div><div class="refsect1" lang="en" xml:lang="en"><a id="id2566560"></a><h2>Description</h2><p>
+<code class="function">SetDataBorderColors</code> sets the color used for the
+borders of the bars and stacked bars for plot types 'bars' and
+'stackedbars'. The borders are only drawn if shading is turned off
+with <a class="xref" href="SetShading.html" title="SetShading"><span class="refentrytitle">SetShading</span></a>; the default is to draw bars with
+a drop-shadow for a 3-D look and no borders.
+    </p></div><div class="refsect1" lang="en" xml:lang="en"><a id="id2566583"></a><h2>Parameters</h2><div class="variablelist"><dl><dt><span class="term"><em class="replaceable"><code>$border</code></em></span></dt><dd><p>
+The desired color for the data borders.
+If this is an array, it sets the color for each data set sequentially from
+the array.
+If this is a single value, it sets the color for all data sets to that.
+See <a class="xref" href="conc-colors.html" title="3.5. Colors">Section 3.5, &#8220;Colors&#8221;</a> for more on color values.
+          </p></dd></dl></div></div><div class="refsect1" lang="en" xml:lang="en"><a id="id2566615"></a><h2>Notes</h2><p>
+If an array is used for <em class="parameter"><code>$border</code></em>, it
+must use zero based sequential integer indexes. This is what the PHP manual 
+calls 'the usual integer indices (starting from zero, increasing by one)'.
+    </p><p>
+If this function is never called, and <a class="xref" href="SetShading.html" title="SetShading"><span class="refentrytitle">SetShading</span></a> is called
+to turn shading off, then all data borders are black.
+    </p><p>
+This is only used for plot types 'bars' and 'stackedbars', and only if shading
+is turned off.
+    </p><p>
+If you want flat (unshaded), borderless bars, call SetShading(0) to turn
+off the shading, and call SetDataBorderColors with the same color (or color
+array) that you use with <a class="xref" href="SetDataColors.html" title="SetDataColors"><span class="refentrytitle">SetDataColors</span></a>.
+    </p></div></div><div class="navfooter"><hr /><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="SetCallback.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="reference.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="SetDataColors.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">SetCallback </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> SetDataColors</td></tr></table></div></body></html>

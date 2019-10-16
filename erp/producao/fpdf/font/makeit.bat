@@ -1,0 +1,1 @@
+ttf2pt1 -a verdanab.ttf verdanab

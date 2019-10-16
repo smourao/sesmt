@@ -1,0 +1,327 @@
+html{
+    /*height: 100%;
+    overflow: auto;
+    */
+    height: 100%;
+    /*width: 990px;*/
+}
+
+body{
+    behavior:url("common/csshover.htc");
+    background-color: #006633;
+    color: #FFFFFF;
+    font-family: Verdana;
+    font-size: 12px;
+    height: 100%;
+    /*width: 990px;*/
+    /*
+    height: 100%;
+    overflow: auto;
+    */
+}
+
+/* -------------- LINKS -------------- */
+a{
+    color: #FFFFFF;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #61B72E;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a.map{
+    font-family: Verdana;
+    font-weight: normal;
+    color: #FFFFFF;
+    font-size: 12px;
+    text-decoration: none;
+}
+.map{
+    font-family: Verdana;
+    color: #FFFFFF;
+    font-weight: normal;
+    font-size: 12px;
+}
+a.map:hover{
+    font-family: Verdana;
+    color: #61B72E;
+    font-weight: normal;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+/* -------------- LIST -------------- */
+ul{
+    list-style-position: outside; /*inside*/
+    list-style-type: square;/*circle, disc, none, square*/
+    line-height: 1.33;
+}
+li{
+
+}
+
+/* -------------- FONT -------------- */
+.text{
+    font-family: Verdana;
+    font-size: 12px;
+}
+
+.textbold{
+    font-family: Verdana;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+td.text{
+    font-family: Verdana;
+    font-size: 12px;
+}
+
+td.textbold{
+    font-family: Verdana;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.text10{
+    font-family: Verdana;
+    font-size: 10px;
+}
+
+td.btext{
+    font-family: Verdana;
+    font-size: 12px;
+    color: #000000;
+}
+
+.bsmall{
+    font-size: 12px;
+    color: #000000;
+}
+.bmedium{
+    font-size: 14px;
+    color: #000000;
+}
+
+/* -------------- HEADER -------------- */
+td.menutopbar{
+   background-image:url('../../images/topbar.jpg');
+   background-repeat: repeat-x;
+}
+
+/* -------------- LINES -------------- */
+td.menul{
+   background-image: url('../../images/bline.jpg');
+   background-repeat: repeat-x;
+   /*background-color: #66A384;*/
+}
+
+.menul{
+   background-image: url('../../images/bline.jpg');
+   background-repeat: repeat-x;
+   width: 100%
+   height: 1px;
+}
+
+/* -------------- BARS -------------- */
+.setorbar{
+   background-image:url('../../images/setor-bar.png');
+   background-repeat: no-repeat;
+   height: 26px;
+}
+
+/* -------------- CURSOR -------------- */
+.curhand{
+    cursor: pointer;
+}
+
+.curhelp{
+    cursor: help;
+}
+
+/* -------------- SYSTEM MSG -------------- */
+body > div.sysmsg {
+  /* used by Opera 5+, Netscape6+/Mozilla, Konqueror, Safari, OmniWeb 4.5+, iCab, ICEbrowser */
+  position: fixed;
+}
+
+
+
+.sysmsg{
+    /*position: fixed;*/
+    position: absolute;
+    z-index:104;
+    width: 400px;
+    height: 150px;
+    left:50%;
+    top: 50%;
+    margin:-75px 0 0 -200px;
+    border: 1px solid #61B72E;
+    border-top: 1px solid #61B72E;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #FFFFFF;/*#2B8A30;*/
+    color: #000000;
+    filter:alpha(opacity=95);
+    -moz-opacity:0.95;
+    -khtml-opacity: 0.95;
+    opacity: 0.95;
+}
+
+/* -------------- CHAT MSG -------------- */
+body > div.chatmsg {
+  /* used by Opera 5+, Netscape6+/Mozilla, Konqueror, Safari, OmniWeb 4.5+, iCab, ICEbrowser */
+  position: fixed;
+}
+
+.chatmsg{
+    position: absolute;
+    z-index:103;
+    width: 700px;
+    height: 220px;
+    right: 0px;
+    bottom: 60px;
+    border: 1px solid #61B72E;
+    border-top: 1px solid #61B72E;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    filter:alpha(opacity=85);
+    -moz-opacity:0.85;
+    -khtml-opacity: 0.85;
+    opacity: 0.85;
+}
+
+.trans{
+    filter:alpha(opacity=95);
+    -moz-opacity:0.95;
+    -khtml-opacity: 0.95;
+    opacity: 0.95;
+}
+
+td.msgh{
+    background-image: url('../../images/sysmsgheader.jpg');
+    width: 400px;
+    height: 30px;
+}
+
+
+/* -------------- CENTERED WINDOW -------------- */
+body > div.centeredwindow {
+  position: fixed;
+}
+
+
+.centeredwindow{
+    /*position: fixed;*/
+    position: absolute;
+    z-index: 102;
+    width: 400px;
+    height: 150px;
+    left: 50%;
+    top: 50%;
+    margin:-75px 0 0 -200px;
+    border: 1px solid #61B72E;
+    border-top: 1px solid #61B72E;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #FFFFFF;/*#2B8A30;*/
+    color: #000000;
+    filter:alpha(opacity=95);
+    -moz-opacity:0.95;
+    -khtml-opacity: 0.95;
+    opacity: 0.95;
+}
+
+
+#mainwork{
+    position:relative;
+    padding-bottom: 25px;
+    min-height:100%;
+    height:auto !important;/*!important*/
+    height:100%;
+    z-index: 100;
+    width: 980px; /*TESTE*/
+    /*overflow:auto;*/
+}
+
+.fadescreen{
+    position: absolute;
+    z-index:101;
+    width: 102%;
+    height: 300%;
+    left:0;
+    top: 0;
+    background-color: #000;
+    color: #FFFFFF;
+    filter:alpha(opacity=70);
+    -moz-opacity:0.7;
+    -khtml-opacity: 0.7;
+    opacity: 0.7;
+}
+
+.infobar{
+    position: absolute;
+    /*float: left;*/
+    top: 0;
+    /*left: 0;*/
+    display: none;
+    width: 98%;
+    *width: 100%;/* COM * SOMENTE PARA O IE*/
+    z-index: 101;
+    border: 1px solid #61B72E;
+    border-top: 1px solid #61B72E;
+    background-color: #000000;
+    color: #FFFFFF;
+    filter:alpha(opacity=85);
+    -moz-opacity:0.85;
+    -khtml-opacity: 0.85;
+    opacity: 0.85;
+}
+
+.cgrt_edif_popup{
+    z-index:102;
+    top: 10px;
+    position: absolute;
+    display: none;
+    font-size: 10px;
+    font-family: Verdana;
+    color: #FFFFFF;
+    text-align: justify;
+    text-justify: newspaper;
+}
+
+#footer{
+    position: relative;
+    bottom: -0 !important; /*!important*/
+    /*clear: both;*/
+    /*width:100%;*/
+    width: 980px; /*TESTE*/
+    height: 25px;
+    margin-top: -25px;
+}
+
+
+.inadimplente_popup{
+    z-index:102;
+    top: 10px;
+	margin: 0 auto;
+	border: 1px solid;
+	width: 300px;
+    position: absolute;
+    display: none;
+    font-size: 10px;
+    font-family: Verdana;
+    color: #FFFFFF;
+    
+}
+

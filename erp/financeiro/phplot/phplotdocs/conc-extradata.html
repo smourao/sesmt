@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /><title>3.8. Extra Data Processing</title><link rel="stylesheet" href="phplotdoc.css" type="text/css" /><meta name="generator" content="DocBook XSL Stylesheets V1.73.2" /><link rel="start" href="index.html" title="PHPlot Reference Manual" /><link rel="up" href="concepts.html" title="Chapter 3. PHPlot Concepts" /><link rel="prev" href="conc-errors.html" title="3.7. Error Handling" /><link rel="next" href="functions.html" title="Chapter 4. PHPlot Functions By Category" /></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">3.8. Extra Data Processing</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="conc-errors.html">Prev</a> </td><th width="60%" align="center">Chapter 3. PHPlot Concepts</th><td width="20%" align="right"> <a accesskey="n" href="functions.html">Next</a></td></tr></table><hr /></div><div class="sect1" lang="en" xml:lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="conc-extradata"></a>3.8. Extra Data Processing</h2></div></div></div><div class="abstract"><p class="title"><b>Abstract</b></p><p>
+This section describes some additional data processing functions
+which are not part of main PHPlot module but can be used with PHPlot
+to perform additional operations on your application data.
+  </p></div><p>
+To use the functions described in this section, instead of including the
+main <code class="filename">phplot.php</code> source file, you instead include the
+<code class="filename">phplot_data.php</code> file. In addition, when creating your
+PHPlot object, use the extended class <code class="literal">PHPlot_data</code>.
+</p><pre class="programlisting">
+require_once 'phplot_data.php';
+$plot = new PHPlot_Data(...);
+</pre><p>
+</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>
+These functions should be considered experimental and subject to change.
+For that reason, they are documented here instead of in the Reference
+chapter.
+  </p></div><div class="sect2" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="conc-extradata-DoScaleData"></a>3.8.1. DoScaleData()</h3></div></div></div><pre class="synopsis">
+$plot-&gt;DoScaleData(<em class="parameter"><code>$even</code></em>, <em class="parameter"><code>$show_in_legend</code></em>)
+</pre><p>
+This function scales values in the data array so that multiple data sets 
+with different maximum values can be plotted together.
+A separate scale factor is calculated for each data set to make
+the maximum value less than the maximum for all data sets.
+</p><p>
+If <em class="parameter"><code>$even</code></em> is True, the scale factors chosen will be
+a multiple of 1, 2, or 5 times a power of 10. Otherwise, the scale factors
+will be not be constrained.
+</p><p>
+If <em class="parameter"><code>$show_in_legend</code></em> is True, the scale factor chosen
+for each data set will be appended to the legend for that data set.
+This lets you see what scale factor was used for the data.
+To use this, you must set the legend before calling DoScaleData.
+</p><p>
+This function only works with 'text-data' data type.
+</p></div><div class="sect2" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="conc-extradata-DoMovingAverage"></a>3.8.2. DoMovingAverage()</h3></div></div></div><pre class="synopsis">
+$plot-&gt;DoMovingAverage(<em class="parameter"><code>$datarow</code></em>, <em class="parameter"><code>$interval</code></em>, [<span class="optional"><em class="parameter"><code>$show</code></em></span>], [<span class="optional"><em class="parameter"><code>$color</code></em></span>], [<span class="optional"><em class="parameter"><code>$width</code></em></span>])
+</pre><p>
+This function computes a moving average over a data set, and adds a new data
+set to the plot data for the moving average.
+</p><p>
+Parameter <em class="parameter"><code>$datarow</code></em> selects the data set over which
+to compute the moving average. For example, if the data array is
+of type 'data-data' and contains records with ('label', X, Y0, Y1, Y2),
+then $datarow=1 computes the moving average over the Y1 data set.
+</p><p>
+Parameter <em class="parameter"><code>$interval</code></em> selects the number of points
+involved in the moving average. For example, if $interval=3 then a moving
+average of 3 values will be computed.
+</p><p>
+If <em class="parameter"><code>$show</code></em> is True, information about the moving
+average will be appended to the legend. The default is True.
+</p><p>
+Parameter <em class="parameter"><code>$color</code></em> gives the color of the new line
+drawn for the moving average. The actual color used is a darker shade
+of the color selected. If this parameter is omitted or NULL, a darker
+shade of the line being averaged is used.
+</p><p>
+Parameter <em class="parameter"><code>$width</code></em> is the width of the moving average
+line to be plotted, in pixels. The default value is the width of the line
+being averaged.
+</p></div></div><div class="navfooter"><hr /><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="conc-errors.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="concepts.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="functions.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">3.7. Error Handling </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> Chapter 4. PHPlot Functions By Category</td></tr></table></div></body></html>

@@ -1,0 +1,691 @@
+body{
+ font-family: verdana;
+ /*color: #FFFFFF;*/
+ font-size: 12px;
+}
+
+table{
+/*padding: 5px;*/
+/*border-spacing: 2px;*/
+}
+
+td.verde{
+ font-size: 12px;
+ /*background-color: #009966;
+ color: #FFFFFF;   */
+ /*border-width: 1px;*/
+ font-family: Verdana;
+}
+
+td{
+ font-size: 12px;
+}
+
+td.pad{
+ font-size: 12px;
+ padding: 5px;
+}
+
+td.info{
+ font-size: 12px;
+ background-color: #008000;
+ color: #FFFFFF;
+}
+
+
+input[type=submit] {
+    border: 1px solid #006;
+    background: #008000;
+    /*color:#99cc33;*/
+    color: #FFFFFF;
+}
+
+
+input[type=submit]:hover {
+    border: 1px solid #006;
+    background: #008000;
+    /*color:#99cc33;*/
+    color: #FFFFFF;
+}
+
+input.submit{
+    border: 1px solid #006;
+    background: #008000;
+    /*color:#99cc33;*/
+    color: #FFFFFF;
+}
+
+
+input.submit:hover{
+    border: 1px solid #006;
+    background: #008000;
+    /*color:#99cc33;*/
+    color: #FFFFFF;
+}
+
+
+input[type=button] {
+    border: 1px solid #006;
+    background: #008000;
+    /*color:#99cc33;*/
+    color: #FFFFFF;
+}
+
+
+input[type=button]:hover {
+    border: 1px solid #006;
+    background: #008000;
+    /*color:#99cc33;*/
+    color: #FFFFFF;;
+}
+
+
+input.button{
+    border: 1px solid #006;
+    background: #008000;
+    /*color:#99cc33;*/
+    color: #FFFFFF;
+}
+
+
+input.button:hover{
+    border: 1px solid #006;
+    background: #008000;
+    /*color:#99cc33;*/
+    color: #FFFFFF;
+}
+
+
+a.link{
+ font-family: verdana;
+ color: #FFFFFF;
+ text-decoration: none;
+ font-size: 12px;
+}
+
+a.link:hover{
+ font-family: verdana;
+ color: #99cc33;
+ text-decoration: none;
+/* font-weight:bold;*/
+ font-size: 12px;
+}
+
+a.green{
+ font-family: verdana;
+ color: #99cc33 ;
+ text-decoration: none;
+ font-size: 12px;
+}
+
+a.green:hover{
+ font-family: verdana;
+ color: #99cc33;
+ text-decoration: underline;
+ font-size: 12px;
+}
+
+a.white{
+ font-family: verdana;
+ color: #FFFFFF ;
+ font-weight:bold;
+ text-decoration: none;
+ font-size: 12px;
+}
+
+a.white:hover{
+ font-family: verdana;
+ color: #FFFFFF;
+ font-weight: bold;
+ text-decoration: underline;
+ font-size: 12px;
+}
+
+input[type=text] {
+/*width: 300px;*/
+/*background-color: cyan;*/
+ /*background-color:336699;*/
+  /*border-color:336699;*/
+  border-style:solid;/*solid;*/
+  border-width:1px;
+  border-color: #aca5a5;
+}
+
+input[type=password] {
+  border-style:groove;/*solid;*/
+  border-width:1px;
+  border-color: #aca5a5;
+}
+
+
+input.text {
+/*width: 300px;*/
+/*background-color: cyan;*/
+ /*background-color:336699;*/
+  /*border-color:336699;*/
+  border-style:solid;/*solid;*/
+  border-width:1px;
+  border-color: #aca5a5;
+}
+
+input.password {
+  border-style:groove;/*solid;*/
+  border-width:1px;
+  border-color: #aca5a5;
+}
+
+p{
+line-height:100%;
+}
+
+div.title1{
+text-align:center;
+font-weight:bold;
+}
+
+span.title1{
+text-align:center;
+font-weight:bold;
+}
+
+a{
+ /*color: #99cc33;*/
+ font-size: 12px;
+ color: #008000;
+ text-decoration: none;
+}
+
+a:hover{
+/* color: #99cc33;  */
+ color: #008000;
+ font-size: 12px;
+/*text-decoration: underline;*/
+text-decoration: none;
+}
+
+/*a.white{
+ color: #FFFFFF;
+ font-size: 12px;
+ text-decoration: none;
+}
+
+a.white:hover{
+ color: #FFFFFF;
+ font-size: 12px;
+text-decoration: underline;
+} */
+
+.fontebranca12{
+font-family:Verdana;
+color: #FFFFFF;
+font-size:12px;
+}
+
+
+.difcursor{
+ cursor:pointer;
+}  
+
+.alert1{
+font-family:Verdana;
+color: #990000;
+font-size:10px;
+text-align: middle;
+}
+
+.menu_dotted{
+   border-width:1px;
+   border-left:0px;
+   border-right:0px;
+   border-bottom:0px;
+   border-style:dotted;
+   border-color:#008000;
+}
+
+
+/* DESCRIÇÕES EM POPUP*/
+.thumbnail{
+position: relative;
+z-index: 0;
+}
+
+.thumbnail:hover{
+background-color: transparent;
+z-index: 50;
+}
+
+.thumbnail div{ /*CSS for enlarged image*/
+position: absolute;
+background-color: lightyellow;
+padding: 5px;
+left: -1000px;
+border: 1px dashed gray;
+visibility: hidden;
+color: black;
+text-decoration: none;
+}
+
+.thumbnail div img{ /*CSS for enlarged image*/
+border-width: 0;
+padding: 2px;
+}
+
+.thumbnail:hover div{ /*CSS for enlarged image on hover*/
+visibility: visible;
+top: 0;
+left: 60px; /*position where enlarged image should offset horizontally */
+
+}
+
+
+
+/*Do not Alter these. Set for alignment*/
+.css1{
+position:absolute;top:0px;left:0px;
+width:16px;height:16px;
+font-family:Arial,sans-serif;
+font-size:16px;
+text-align:center;
+font-weight:bold;
+}
+.css2{
+position:absolute;top:0px;left:0px;
+width:10px;height:10px;
+font-family:Arial,sans-serif;
+font-size:10px;
+text-align:center;
+}
+
+
+#MCDemo img {
+/* needed for Mozilla/Camino/Netscape */
+	border:0px;
+}
+
+#MCDemo a {
+/* Controls the general apperance for menu MMMenuContainer1024110355_0's items, including color and font */
+	text-decoration:none;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#ffffff;
+	text-align:left;
+	vertical-align:middle;
+	padding:0px;
+	background-color:#008000;
+	font-weight:normal;
+	font-style:normal;
+	display:block;
+	position:absolute;
+}
+
+#MCDemo a:hover {
+/* Controls the mouse over effects for menu MMMenuContainer1024110355_0 */
+	color:#333333;
+	background-color:#99cc33;
+}
+#MCDemo {
+/* This ID is related to the master menu div for menu MMMenuContainer1024110248_1 and contains the important positioning information for the menu as a whole */
+	position:absolute;
+	left:137px;
+	top:15px;
+	visibility:hidden;
+	z-index:300;
+}
+
+#MDemo {
+/* This class defines things about menu MMMenu1024110248_1's div. */
+	position:absolute;
+	left:0px;
+	top:0px;
+	visibility:hidden;
+	background-color:transparent;
+	width:118px;
+	height:16px;
+}
+
+.MMMIFVStyleMDemo {
+/* This class determines the general characteristics of the menu items in menu MMMenu1024110853_0 */
+	border-top:0px solid #ffffff;
+	border-left:0px solid #ffffff;
+	border-bottom:0px solid #ff0000;
+	border-right:0px solid #ff0000;
+	width:132px;
+	height:16px;
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width:132px;
+	height:16px;
+}
+
+.MMMIVStyleMDemo {
+/* This class determines the general characteristics of the menu items in menu MMMenu1024110853_0 */
+	border-top:0px;
+	border-left:0px solid #ffffff;
+	border-bottom:0px solid #ff0000;
+	border-right:0px solid #ff0000;
+	width:132px;
+	height:16px;
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width:132px;
+	height:16px;
+}
+
+#MDemo_Item_0 {
+/* Unique ID for item 0 of menu MMMenu1024110248_1 so we can set its position */
+	left:0px;
+	top:0px;
+}
+
+#MDemo_Item_1 {
+/* Unique ID for item 1 of menu MMMenu1024110248_1 so we can set its position */
+	left:0px;
+	top:16px;
+}
+
+#MDemo_Item_2 {
+/* Unique ID for item 2 of menu MMMenu1024110248_1 so we can set its position */
+	left:0px;
+	top:32px;
+}
+
+
+#popup{
+position: absolute; /*Define a posição absoluta da pop-up*/
+top: 160px; /*Distancia da margem superior da página */
+left: 30%; /*Distancia da margem esquerda da página */
+/*width: 300px; /*Largura da pop-up*/
+/*height: 100px; /*Altura da pop-up*/
+/*padding: 20px 20px 20px 20px; /*Margem interna da pop-up*/
+/*border-width: 1px; /*Largura da borda da pop-up*/
+/*border-style: solid; /*Estilo da borda da pop-up*/
+/*background: #ccc; /*Cor de fundo da pop-up*/
+/*color: #000066; /*Cor do texto da pop-up*/
+display: none; /* Estilo da pop-up - none / block */
+/*fim pop-up*/
+}
+
+td.popup{
+border-width: 1px; /*Largura da borda da pop-up*/
+border-style: solid; /*Estilo da borda da pop-up*/
+background: #008000; /*Cor de fundo da pop-up*/
+color: #FFFFFF; /*Cor do texto da pop-up*/
+filter:alpha(opacity=90);-moz-opacity:.90;opacity:.90;
+}
+
+td.popup:hover{
+border-width: 1px; /*Largura da borda da pop-up*/
+border-style: solid; /*Estilo da borda da pop-up*/
+background: #008000; /*Cor de fundo da pop-up*/
+color: #FFFFFF; /*Cor do texto da pop-up*/
+filter:alpha(opacity=99);-moz-opacity:.99;opacity:.99;
+}
+
+.popup2{position:relative;}
+
+
+.excluir{
+ font-family: verdana;
+ color: #FF0000;
+ font-size: 12px;
+}
+
+.excluir:hover{
+ font-family: verdana;
+ color: #fa3d3d;
+ font-size: 12px;
+}
+
+.concluido{
+ font-family: verdana;
+ color: #008000;
+ font-size: 12px;
+}
+
+.concluido:hover{
+ font-family: verdana;
+ color: #2a9d2a;
+ font-size: 12px;
+}
+
+#cpf redmark{
+border-color:#00FFFF;
+color: #008000;
+}
+
+.loading{
+display: block;
+position: relative;
+left: 0px;
+top: 60px;
+width:0px;
+height:0px;
+color: #888000;
+z-index:1;
+}
+
+.loading_done{
+position: relative;
+display: none;
+}
+
+
+
+#MCgov_cat img {
+/* needed for Mozilla/Camino/Netscape */
+	border:0px;
+}
+
+#MCgov_cat a {
+/* Controls the general apperance for menu MMMenuContainer1024110355_0's items, including color and font */
+	text-decoration:none;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#ffffff;
+	text-align:left;
+	vertical-align:middle;
+	padding:0px;
+	background-color:#008000;
+	font-weight:normal;
+	font-style:normal;
+	display:block;
+	position:absolute;
+}
+
+#MCgov_cat a:hover {
+/* Controls the mouse over effects for menu MMMenuContainer1024110355_0 */
+	color:#333333;
+	background-color:#99cc33;
+}
+#MCgov_cat {
+/* This ID is related to the master menu div for menu MMMenuContainer1024110248_1 and contains the important positioning information for the menu as a whole */
+	position:absolute;
+	left:0px;
+	top:14px;
+	visibility:hidden;
+	z-index:300;
+}
+
+#Mgov_cat {
+/* This class defines things about menu MMMenu1024110248_1's div. */
+	position:absolute;
+	left:0px;
+	top:0px;
+	visibility:hidden;
+	background-color:transparent;
+	width:318px;
+	height:16px;
+}
+
+.MMMIFVStyleMgov_cat {
+/* This class determines the general characteristics of the menu items in menu MMMenu1024110853_0 */
+	border-top:0px solid #ffffff;
+	border-left:0px solid #ffffff;
+	border-bottom:0px solid #ff0000;
+	border-right:0px solid #ff0000;
+	width:318px;
+	height:16px;
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width:318px;
+	height:16px;
+}
+
+.MMMIVStyleMgov_cat {
+/* This class determines the general characteristics of the menu items in menu MMMenu1024110853_0 */
+	border-top:0px;
+	border-left:0px solid #ffffff;
+	border-bottom:0px solid #ff0000;
+	border-right:0px solid #ff0000;
+	width:132px;
+	height:16px;
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width:132px;
+	height:16px;
+}
+
+#Mgov_cat_Item_0 {
+/* Unique ID for item 0 of menu MMMenu1024110248_1 so we can set its position */
+	left:0px;
+	top:0px;
+}
+
+#Mgov_cat_Item_1 {
+/* Unique ID for item 1 of menu MMMenu1024110248_1 so we can set its position */
+	left:0px;
+	top:16px;
+}
+
+#Mgov_cat_Item_2 {
+/* Unique ID for item 2 of menu MMMenu1024110248_1 so we can set its position */
+	left:0px;
+	top:32px;
+}
+
+#Mgov_cat_Item_3 {
+/* Unique ID for item 2 of menu MMMenu1024110248_1 so we can set its position */
+	left:0px;
+	top:48px;
+}
+
+#Mgov_cat_Item_4 {
+/* Unique ID for item 2 of menu MMMenu1024110248_1 so we can set its position */
+	left:0px;
+	top:64px;
+}
+
+#Mgov_cat_Item_5 {
+/* Unique ID for item 2 of menu MMMenu1024110248_1 so we can set its position */
+	left:0px;
+	top:80px;
+}
+
+#Mgov_cat_Item_6 {
+/* Unique ID for item 2 of menu MMMenu1024110248_1 so we can set its position */
+	left:0px;
+	top:96px;
+}
+
+#Mgov_cat_Item_7 {
+/* Unique ID for item 2 of menu MMMenu1024110248_1 so we can set its position */
+	left:0px;
+	top:112px;
+}
+
+
+
+
+
+
+#MCASN img {
+/* needed for Mozilla/Camino/Netscape */
+	border:0px;
+}
+
+#MCASN a {
+/* Controls the general apperance for menu MMMenuContainer1024110355_0's items, including color and font */
+	text-decoration:none;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#ffffff;
+	text-align:left;
+	vertical-align:middle;
+	padding:0px;
+	background-color:#008000;
+	font-weight:normal;
+	font-style:normal;
+	display:block;
+	position:absolute;
+}
+
+#MCASN a:hover {
+/* Controls the mouse over effects for menu MMMenuContainer1024110355_0 */
+	color:#333333;
+	background-color:#99cc33;
+}
+#MCASN {
+/* This ID is related to the master menu div for menu MMMenuContainer1024110248_1 and contains the important positioning information for the menu as a whole */
+	position:absolute;
+	left:489px;
+	top:14px;
+	visibility:hidden;
+	z-index:300;
+}
+
+#MASN {
+/* This class defines things about menu MMMenu1024110248_1's div. */
+	position:absolute;
+	left:0px;
+	top:0px;
+	visibility:hidden;
+	background-color:transparent;
+	width:172px;
+	height:16px;
+}
+
+.MMMIFVStyleMASN {
+/* This class determines the general characteristics of the menu items in menu MMMenu1024110853_0 */
+	border-top:0px solid #ffffff;
+	border-left:0px solid #ffffff;
+	border-bottom:0px solid #ff0000;
+	border-right:0px solid #ff0000;
+	width:172px;
+	height:16px;
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width:172px;
+	height:16px;
+}
+
+.MMMIVStyleMASN {
+/* This class determines the general characteristics of the menu items in menu MMMenu1024110853_0 */
+	border-top:0px;
+	border-left:0px solid #ffffff;
+	border-bottom:0px solid #ff0000;
+	border-right:0px solid #ff0000;
+	width:172px;
+	height:16px;
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width:172px;
+	height:16px;
+}
+
+#MASN_Item_0 {
+/* Unique ID for item 0 of menu MMMenu1024110248_1 so we can set its position */
+	left:0px;
+	top:0px;
+}
+
+#MASN_Item_1 {
+/* Unique ID for item 1 of menu MMMenu1024110248_1 so we can set its position */
+	left:0px;
+	top:16px;
+}
+
+#MASN_Item_2 {
+/* Unique ID for item 2 of menu MMMenu1024110248_1 so we can set its position */
+	left:0px;
+	top:32px;
+}

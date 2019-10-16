@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /><title>2.6. Customization</title><link rel="stylesheet" href="phplotdoc.css" type="text/css" /><meta name="generator" content="DocBook XSL Stylesheets V1.73.2" /><link rel="start" href="index.html" title="PHPlot Reference Manual" /><link rel="up" href="starting.html" title="Chapter 2. Getting Started with PHPlot" /><link rel="prev" href="start-multiple.html" title="2.5. Multiple Lines Per Graph" /><link rel="next" href="starting-next.html" title="2.7. What's Next?" /></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">2.6. Customization</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="start-multiple.html">Prev</a> </td><th width="60%" align="center">Chapter 2. Getting Started with PHPlot</th><td width="20%" align="right"> <a accesskey="n" href="starting-next.html">Next</a></td></tr></table><hr /></div><div class="sect1" lang="en" xml:lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="starting-custom"></a>2.6. Customization</h2></div></div></div><p>
+PHPlot can draw these types of plots:
+  </p><div class="itemizedlist"><ul type="disc"><li><p>
+Bars (with optional shadows)
+      </p></li><li><p>
+Lines
+      </p></li><li><p>
+Linepoints (a faster way of plotting when you want both points and lines)
+      </p></li><li><p>
+Area
+      </p></li><li><p>
+Points (lots of point types here)
+      </p></li><li><p>
+Pie (2D or 3D)
+      </p></li><li><p>
+Thinbarline (sometimes also called impulse)
+      </p></li><li><p>
+Error bar (which can also be used for stock market data graphs)
+      </p></li><li><p>
+Squared (steps)
+      </p></li></ul></div><p>
+</p><p>
+You specify which type of plot you want with the <a class="xref" href="SetPlotType.html" title="SetPlotType"><span class="refentrytitle">SetPlotType</span></a>
+function.
+</p><p>
+There are many ways we can change the look and feel of the graph.
+Almost every parameter of the graph, including ticks, grids, and data labels,
+can be adjusted using PHPlot functions.
+Here is a list of functions used to customize graphs.
+Each of these is described in detail in the reference material in
+<a class="xref" href="reference.html" title="PHPlot Function Reference">PHPlot Function Reference</a>.
+
+</p><div class="variablelist"><dl><dt><span class="term">Colors, Background, Border:</span></dt><dd><p>
+<a class="xref" href="SetBackgroundColor.html" title="SetBackgroundColor"><span class="refentrytitle">SetBackgroundColor</span></a>,
+<a class="xref" href="SetBgImage.html" title="SetBgImage"><span class="refentrytitle">SetBgImage</span></a>,
+<a class="xref" href="SetDataBorderColors.html" title="SetDataBorderColors"><span class="refentrytitle">SetDataBorderColors</span></a>,
+<a class="xref" href="SetDataColors.html" title="SetDataColors"><span class="refentrytitle">SetDataColors</span></a>,
+<a class="xref" href="SetDrawPlotAreaBackground.html" title="SetDrawPlotAreaBackground"><span class="refentrytitle">SetDrawPlotAreaBackground</span></a>,
+<a class="xref" href="SetErrorBarColors.html" title="SetErrorBarColors"><span class="refentrytitle">SetErrorBarColors</span></a>,
+<a class="xref" href="SetGridColor.html" title="SetGridColor"><span class="refentrytitle">SetGridColor</span></a>,
+<a class="xref" href="SetImageBorderColor.html" title="SetImageBorderColor"><span class="refentrytitle">SetImageBorderColor</span></a>,
+<a class="xref" href="SetImageBorderType.html" title="SetImageBorderType"><span class="refentrytitle">SetImageBorderType</span></a>,
+<a class="xref" href="SetLightGridColor.html" title="SetLightGridColor"><span class="refentrytitle">SetLightGridColor</span></a>,
+<a class="xref" href="SetPlotAreaBgImage.html" title="SetPlotAreaBgImage"><span class="refentrytitle">SetPlotAreaBgImage</span></a>,
+<a class="xref" href="SetPlotBgColor.html" title="SetPlotBgColor"><span class="refentrytitle">SetPlotBgColor</span></a>,
+<a class="xref" href="SetPlotBorderType.html" title="SetPlotBorderType"><span class="refentrytitle">SetPlotBorderType</span></a>,
+<a class="xref" href="SetRGBArray.html" title="SetRGBArray"><span class="refentrytitle">SetRGBArray</span></a>,
+<a class="xref" href="SetShading.html" title="SetShading"><span class="refentrytitle">SetShading</span></a>,
+<a class="xref" href="SetTextColor.html" title="SetTextColor"><span class="refentrytitle">SetTextColor</span></a>,
+<a class="xref" href="SetTickColor.html" title="SetTickColor"><span class="refentrytitle">SetTickColor</span></a>,
+<a class="xref" href="SetTitleColor.html" title="SetTitleColor"><span class="refentrytitle">SetTitleColor</span></a>,
+<a class="xref" href="SetTransparentColor.html" title="SetTransparentColor"><span class="refentrytitle">SetTransparentColor</span></a>
+      </p></dd><dt><span class="term">Point Shapes and Plotted Line Styles:</span></dt><dd><p>
+<a class="xref" href="SetDefaultDashedStyle.html" title="SetDefaultDashedStyle"><span class="refentrytitle">SetDefaultDashedStyle</span></a>,
+<a class="xref" href="SetDrawBrokenLines.html" title="SetDrawBrokenLines"><span class="refentrytitle">SetDrawBrokenLines</span></a>,
+<a class="xref" href="SetErrorBarLineWidth.html" title="SetErrorBarLineWidth"><span class="refentrytitle">SetErrorBarLineWidth</span></a>,
+<a class="xref" href="SetErrorBarShape.html" title="SetErrorBarShape"><span class="refentrytitle">SetErrorBarShape</span></a>,
+<a class="xref" href="SetErrorBarSize.html" title="SetErrorBarSize"><span class="refentrytitle">SetErrorBarSize</span></a>,
+<a class="xref" href="SetLineStyles.html" title="SetLineStyles"><span class="refentrytitle">SetLineStyles</span></a>,
+<a class="xref" href="SetLineWidths.html" title="SetLineWidths"><span class="refentrytitle">SetLineWidths</span></a>,
+<a class="xref" href="SetPointShapes.html" title="SetPointShapes"><span class="refentrytitle">SetPointShapes</span></a>,
+<a class="xref" href="SetPointSizes.html" title="SetPointSizes"><span class="refentrytitle">SetPointSizes</span></a>
+      </p></dd><dt><span class="term">Fonts and Text:</span></dt><dd><p>
+<a class="xref" href="SetDefaultTTFont.html" title="SetDefaultTTFont"><span class="refentrytitle">SetDefaultTTFont</span></a>,
+<a class="xref" href="SetFont.html" title="SetFont"><span class="refentrytitle">SetFont</span></a>,
+<a class="xref" href="SetLineSpacing.html" title="SetLineSpacing"><span class="refentrytitle">SetLineSpacing</span></a>,
+<a class="xref" href="SetTTFPath.html" title="SetTTFPath"><span class="refentrytitle">SetTTFPath</span></a>,
+<a class="xref" href="SetUseTTF.html" title="SetUseTTF"><span class="refentrytitle">SetUseTTF</span></a>
+      </p></dd><dt><span class="term">Grids:</span></dt><dd><p>
+<a class="xref" href="SetDrawDashedGrid.html" title="SetDrawDashedGrid"><span class="refentrytitle">SetDrawDashedGrid</span></a>,
+<a class="xref" href="SetDrawXGrid.html" title="SetDrawXGrid"><span class="refentrytitle">SetDrawXGrid</span></a>,
+<a class="xref" href="SetDrawYGrid.html" title="SetDrawYGrid"><span class="refentrytitle">SetDrawYGrid</span></a>
+<a class="xref" href="SetGridColor.html" title="SetGridColor"><span class="refentrytitle">SetGridColor</span></a>,
+<a class="xref" href="SetLightGridColor.html" title="SetLightGridColor"><span class="refentrytitle">SetLightGridColor</span></a>,
+      </p></dd><dt><span class="term">Titles and Legend:</span></dt><dd><p>
+<a class="xref" href="SetLegend.html" title="SetLegend"><span class="refentrytitle">SetLegend</span></a>,
+<a class="xref" href="SetLegendPixels.html" title="SetLegendPixels"><span class="refentrytitle">SetLegendPixels</span></a>,
+<a class="xref" href="SetLegendWorld.html" title="SetLegendWorld"><span class="refentrytitle">SetLegendWorld</span></a>,
+<a class="xref" href="SetTitle.html" title="SetTitle"><span class="refentrytitle">SetTitle</span></a>,
+<a class="xref" href="SetXTitle.html" title="SetXTitle"><span class="refentrytitle">SetXTitle</span></a>,
+<a class="xref" href="SetYTitle.html" title="SetYTitle"><span class="refentrytitle">SetYTitle</span></a>
+      </p></dd><dt><span class="term">Tick Marks and Labels:</span></dt><dd><p>
+<a class="xref" href="SetLabelScalePosition.html" title="SetLabelScalePosition"><span class="refentrytitle">SetLabelScalePosition</span></a>,
+<a class="xref" href="SetNumXTicks.html" title="SetNumXTicks"><span class="refentrytitle">SetNumXTicks</span></a>,
+<a class="xref" href="SetNumYTicks.html" title="SetNumYTicks"><span class="refentrytitle">SetNumYTicks</span></a>,
+<a class="xref" href="SetSkipBottomTick.html" title="SetSkipBottomTick"><span class="refentrytitle">SetSkipBottomTick</span></a>,
+<a class="xref" href="SetSkipLeftTick.html" title="SetSkipLeftTick"><span class="refentrytitle">SetSkipLeftTick</span></a>,
+<a class="xref" href="SetSkipRightTick.html" title="SetSkipRightTick"><span class="refentrytitle">SetSkipRightTick</span></a>,
+<a class="xref" href="SetSkipTopTick.html" title="SetSkipTopTick"><span class="refentrytitle">SetSkipTopTick</span></a>,
+<a class="xref" href="SetXTickCrossing.html" title="SetXTickCrossing"><span class="refentrytitle">SetXTickCrossing</span></a>,
+<a class="xref" href="SetXTickIncrement.html" title="SetXTickIncrement"><span class="refentrytitle">SetXTickIncrement</span></a>,
+<a class="xref" href="SetXTickLabelPos.html" title="SetXTickLabelPos"><span class="refentrytitle">SetXTickLabelPos</span></a>,
+<a class="xref" href="SetXTickLength.html" title="SetXTickLength"><span class="refentrytitle">SetXTickLength</span></a>,
+<a class="xref" href="SetXTickPos.html" title="SetXTickPos"><span class="refentrytitle">SetXTickPos</span></a>,
+<a class="xref" href="SetYTickCrossing.html" title="SetYTickCrossing"><span class="refentrytitle">SetYTickCrossing</span></a>,
+<a class="xref" href="SetYTickIncrement.html" title="SetYTickIncrement"><span class="refentrytitle">SetYTickIncrement</span></a>,
+<a class="xref" href="SetYTickLabelPos.html" title="SetYTickLabelPos"><span class="refentrytitle">SetYTickLabelPos</span></a>,
+<a class="xref" href="SetYTickLength.html" title="SetYTickLength"><span class="refentrytitle">SetYTickLength</span></a>,
+<a class="xref" href="SetYTickPos.html" title="SetYTickPos"><span class="refentrytitle">SetYTickPos</span></a>
+      </p></dd><dt><span class="term">Axes and Data Labels:</span></dt><dd><p>
+<a class="xref" href="SetDrawXDataLabelLines.html" title="SetDrawXDataLabelLines"><span class="refentrytitle">SetDrawXDataLabelLines</span></a>,
+<a class="xref" href="SetXAxisPosition.html" title="SetXAxisPosition"><span class="refentrytitle">SetXAxisPosition</span></a>,
+<a class="xref" href="SetPrecisionX.html" title="SetPrecisionX"><span class="refentrytitle">SetPrecisionX</span></a>,
+<a class="xref" href="SetPrecisionY.html" title="SetPrecisionY"><span class="refentrytitle">SetPrecisionY</span></a>,
+<a class="xref" href="SetXDataLabelPos.html" title="SetXDataLabelPos"><span class="refentrytitle">SetXDataLabelPos</span></a>,
+<a class="xref" href="SetXLabelAngle.html" title="SetXLabelAngle"><span class="refentrytitle">SetXLabelAngle</span></a>,
+<a class="xref" href="SetXLabelType.html" title="SetXLabelType"><span class="refentrytitle">SetXLabelType</span></a>,
+<a class="xref" href="SetXScaleType.html" title="SetXScaleType"><span class="refentrytitle">SetXScaleType</span></a>,
+<a class="xref" href="SetXTimeFormat.html" title="SetXTimeFormat"><span class="refentrytitle">SetXTimeFormat</span></a>,
+<a class="xref" href="SetYAxisPosition.html" title="SetYAxisPosition"><span class="refentrytitle">SetYAxisPosition</span></a>,
+<a class="xref" href="SetYDataLabelPos.html" title="SetYDataLabelPos"><span class="refentrytitle">SetYDataLabelPos</span></a>,
+<a class="xref" href="SetYLabelAngle.html" title="SetYLabelAngle"><span class="refentrytitle">SetYLabelAngle</span></a>,
+<a class="xref" href="SetYLabelType.html" title="SetYLabelType"><span class="refentrytitle">SetYLabelType</span></a>,
+<a class="xref" href="SetYScaleType.html" title="SetYScaleType"><span class="refentrytitle">SetYScaleType</span></a>,
+<a class="xref" href="SetYTimeFormat.html" title="SetYTimeFormat"><span class="refentrytitle">SetYTimeFormat</span></a>
+      </p></dd><dt><span class="term">Margins and Scaling:</span></dt><dd><p>
+<a class="xref" href="SetMarginsPixels.html" title="SetMarginsPixels"><span class="refentrytitle">SetMarginsPixels</span></a>,
+<a class="xref" href="SetPlotAreaPixels.html" title="SetPlotAreaPixels"><span class="refentrytitle">SetPlotAreaPixels</span></a>,
+<a class="xref" href="SetPlotAreaWorld.html" title="SetPlotAreaWorld"><span class="refentrytitle">SetPlotAreaWorld</span></a>
+      </p></dd></dl></div><p>
+
+</p></div><div class="navfooter"><hr /><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="start-multiple.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="starting.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="starting-next.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">2.5. Multiple Lines Per Graph </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> 2.7. What's Next?</td></tr></table></div></body></html>

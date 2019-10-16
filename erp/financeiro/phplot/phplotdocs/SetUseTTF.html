@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /><title>SetUseTTF</title><link rel="stylesheet" href="phplotdoc.css" type="text/css" /><meta name="generator" content="DocBook XSL Stylesheets V1.73.2" /><link rel="start" href="index.html" title="PHPlot Reference Manual" /><link rel="up" href="reference.html" title="PHPlot Function Reference" /><link rel="prev" href="SetTransparentColor.html" title="SetTransparentColor" /><link rel="next" href="SetXAxisPosition.html" title="SetXAxisPosition" /></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">SetUseTTF</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="SetTransparentColor.html">Prev</a> </td><th width="60%" align="center">PHPlot Function Reference</th><td width="20%" align="right"> <a accesskey="n" href="SetXAxisPosition.html">Next</a></td></tr></table><hr /></div><div class="refentry" lang="en" xml:lang="en"><a id="SetUseTTF"></a><div class="titlepage"></div><div class="refnamediv"><h2><span class="refentrytitle">SetUseTTF</span></h2><p>SetUseTTF &#8212; Set the default font type</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><pre class="synopsis">
+$plot-&gt;SetUseTTF(<em class="parameter"><code>$ttf</code></em>)
+    </pre></div><div class="refsect1" lang="en" xml:lang="en"><a id="id2575103"></a><h2>Description</h2><p>
+<code class="function">SetUseTTF</code> sets the default font type to TrueType fonts or
+built-in GD fonts, and re-initializes all font settings.
+    </p></div><div class="refsect1" lang="en" xml:lang="en"><a id="id2575120"></a><h2>Parameters</h2><div class="variablelist"><dl><dt><span class="term"><em class="replaceable"><code>$ttf</code></em></span></dt><dd><p>
+True to use TrueType fonts by default, False to use built-in GD fonts
+by default.
+          </p></dd></dl></div></div><div class="refsect1" lang="en" xml:lang="en"><a id="id2575146"></a><h2>Notes</h2><p>
+Changing the font type re-initializes all the font settings to the defaults.
+    </p><p>
+The default is False, to use the built-in GD fonts.
+    </p><p>
+There must be a valid default font before enabling TrueType fonts with
+SetUseTTF, or PHPlot will abort with an error because it cannot find
+the default font. There are three ways to
+properly set up TrueType fonts to avoid this error:
+      </p><div class="itemizedlist"><ul type="disc"><li><p>
+Call <a class="xref" href="SetDefaultTTFont.html" title="SetDefaultTTFont"><span class="refentrytitle">SetDefaultTTFont</span></a> with the full pathname to a
+TrueType font file to use as the default. Since SetDefaultTTFont
+automatically selects TrueType fonts as the default,
+you don't need to call SetUseTTF if you use this option.
+          </p></li><li><p>
+Call <a class="xref" href="SetTTFPath.html" title="SetTTFPath"><span class="refentrytitle">SetTTFPath</span></a> with the path to a directory where you
+have stored TrueType fonts, then call <a class="xref" href="SetDefaultTTFont.html" title="SetDefaultTTFont"><span class="refentrytitle">SetDefaultTTFont</span></a>
+with the filename (e.g. <code class="filename">arial.ttf</code>) of the
+TrueType font file to use as the default. Since SetDefaultTTFont
+automatically selects TrueType fonts as the default,
+you don't need to call SetUseTTF if you use this option either.
+          </p></li><li><p>
+Modify the built-in values for the default TrueType font, and the default
+font directory (if needed), in <code class="filename">phplot.php</code> at
+installation time as described in <a class="xref" href="install-install.html" title="1.2. Installing">Section 1.2, &#8220;Installing&#8221;</a>.
+If the built-in defaults are sufficient to find the font file, you can
+use SetUseTTF to enable TrueType fonts.
+          </p></li></ul></div><p>
+    </p><p>
+After enabling TrueType fonts, you can use
+<a class="xref" href="SetFont.html" title="SetFont"><span class="refentrytitle">SetFont</span></a> or <a class="xref" href="SetFontTTF.html" title="SetFontTTF"><span class="refentrytitle">SetFontTTF</span></a>
+to select fonts and sizes for individual text elements in the plot.
+You can also use <a class="xref" href="SetFontGD.html" title="SetFontGD"><span class="refentrytitle">SetFontGD</span></a> to use GD fonts for one or
+more elements, overriding the default font type.
+    </p></div><div class="refsect1" lang="en" xml:lang="en"><a id="id2575263"></a><h2>History</h2><p>
+Through PHPlot-5.0.5, this function enabled or disabled the use of TrueType
+font text, since all text on a graph had to be either TrueType or all GD.
+Starting with PHPlot-5.0.6, this function selects the default font type (and
+still re-initializes all fonts). Both GD and TrueType font text can now be
+used on a graph.
+    </p></div></div><div class="navfooter"><hr /><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="SetTransparentColor.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="reference.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="SetXAxisPosition.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">SetTransparentColor </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> SetXAxisPosition</td></tr></table></div></body></html>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /><title>3.6. Labels</title><link rel="stylesheet" href="phplotdoc.css" type="text/css" /><meta name="generator" content="DocBook XSL Stylesheets V1.73.2" /><link rel="start" href="index.html" title="PHPlot Reference Manual" /><link rel="up" href="concepts.html" title="Chapter 3. PHPlot Concepts" /><link rel="prev" href="conc-colors.html" title="3.5. Colors" /><link rel="next" href="conc-errors.html" title="3.7. Error Handling" /></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">3.6. Labels</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="conc-colors.html">Prev</a> </td><th width="60%" align="center">Chapter 3. PHPlot Concepts</th><td width="20%" align="right"> <a accesskey="n" href="conc-errors.html">Next</a></td></tr></table><hr /></div><div class="sect1" lang="en" xml:lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="conc-labels"></a>3.6. Labels</h2></div></div></div><div class="abstract"><p class="title"><b>Abstract</b></p><p>
+This section contains information about creating labels which identify data
+values on the plot.
+There are two types of labels for X values: data labels and tick labels.
+There are also tick labels for Y values, and data labels for Y values
+which only work with bar charts. None of this applies to pie charts, which
+have no tick labels and internally-generated data value labels.
+  </p></div><div class="sect2" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="conc-labels-tick"></a>3.6.1. Tick Labels</h3></div></div></div><p>
+Tick labels are calculated from the X or Y values of the data. By default,
+PHPlot will figure out what to use for X and Y tick labels, but the results
+may not be what you want. You can change the calculated tick labels by
+using several PHPlot functions.
+You can use <a class="xref" href="SetXTickIncrement.html" title="SetXTickIncrement"><span class="refentrytitle">SetXTickIncrement</span></a> and
+<a class="xref" href="SetYTickIncrement.html" title="SetYTickIncrement"><span class="refentrytitle">SetYTickIncrement</span></a>
+to set the spacing between tick marks (in World Coordinates),
+or you can use <a class="xref" href="SetNumXTicks.html" title="SetNumXTicks"><span class="refentrytitle">SetNumXTicks</span></a> and <a class="xref" href="SetNumYTicks.html" title="SetNumYTicks"><span class="refentrytitle">SetNumYTicks</span></a>
+to set the number of tick marks.
+These don't affect the value of the first tick mark, only the interval.
+To set the value for the first tick mark, you define the World Coordinate
+mapping with <a class="xref" href="SetPlotAreaWorld.html" title="SetPlotAreaWorld"><span class="refentrytitle">SetPlotAreaWorld</span></a>. For example:
+</p><pre class="programlisting">
+$plot-&gt;SetPlotAreaWorld(-10, NULL, 10, NULL);
+$plot-&gt;SetXTickIncrement(1);
+</pre><p>
+This results in the X tick labels going from -10 to 10, with a tick mark
+every 1 data unit.
+</p><p>
+Note that even with data type 'data-data', where explicit X values for the
+data are supplied, the X tick labels are still calculated automatically
+(unless modified by the functions named above). That is, your supplied X
+values in the data array are not used for tick labels.
+</p><p>
+Both X tick labels and Y tick labels are plotted by default, and can be
+disabled or repositioned with <a class="xref" href="SetXTickLabelPos.html" title="SetXTickLabelPos"><span class="refentrytitle">SetXTickLabelPos</span></a>
+and <a class="xref" href="SetYTickLabelPos.html" title="SetYTickLabelPos"><span class="refentrytitle">SetYTickLabelPos</span></a>.
+</p></div><div class="sect2" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="conc-labels-data"></a>3.6.2. Data Labels</h3></div></div></div><p>
+Data labels apply to X values for all plot types.
+X data labels are supplied in your data array for each data point.
+For example, with data type text-data :
+</p><pre class="programlisting">
+     $data = array( array('Peaches',100),
+                    array('Apples', 140),
+                    array('Pears', 90));
+</pre><p>
+The three points have data labels 'Peaches', 'Apples', and 'Pears'.
+These data labels will be drawn at the bottom of the plot (by default)
+below the corresponding X values.
+X data labels are drawn by default. You can disable or reposition the
+labels with <a class="xref" href="SetXDataLabelPos.html" title="SetXDataLabelPos"><span class="refentrytitle">SetXDataLabelPos</span></a>.
+</p><p>
+Since by default both X data labels and X tick labels are enabled, you need
+to turn one off or you will get overlapped, double labels.  (Unless the
+label strings in your data array are empty.) If you enable or position X
+tick labels, then PHPlot will automatically turn off X data labels.  If you
+enable or position X data labels, then PHPlot will automatically turn off X
+tick labels.  But if you do neither, you get both tick and data labels.
+</p><p>
+There is one type of Y data label for bar charts.
+Use <a class="xref" href="SetYDataLabelPos.html" title="SetYDataLabelPos"><span class="refentrytitle">SetYDataLabelPos</span></a> to enable Y data labels, which
+indicate the Y value right above each bar.
+<a class="xref" href="ex-bars4.html#example-bars4" title="Example 5.19. Bar Chart with Data Labels">Example 5.19, &#8220;Bar Chart with Data Labels&#8221;</a> shows a bar chart with Y data labels.
+</p></div><div class="sect2" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="conc-labels-format"></a>3.6.3. Formatting Labels</h3></div></div></div><p>
+Both tick and data labels are subject to format controls. There are three
+choices in formatting.  By default, the label value itself is simply displayed.
+Use <a class="xref" href="SetXLabelType.html" title="SetXLabelType"><span class="refentrytitle">SetXLabelType</span></a> and <a class="xref" href="SetYLabelType.html" title="SetYLabelType"><span class="refentrytitle">SetYLabelType</span></a> to
+select one of the other two format types: 'time' or 'data', as described
+in the following paragraphs.
+</p><p>
+Label type 'data' expects the tick or data label values to be numbers, and
+formats the values as floating point numbers with a comma between every
+group of thousands and a fixed number of decimal places.
+Use <a class="xref" href="SetPrecisionX.html" title="SetPrecisionX"><span class="refentrytitle">SetPrecisionX</span></a> and <a class="xref" href="SetPrecisionY.html" title="SetPrecisionY"><span class="refentrytitle">SetPrecisionY</span></a>
+to select the number of decimal places.
+By default, the precision is 1, meaning there will be one decimal position
+after the decimal point.
+</p><p>
+Label type 'time' expects the tick or data label values to be a PHP time
+values (number of seconds since a fixed base data, the Unix Epoch).
+PHPlot will format the labels according to the format string you provide
+with <a class="xref" href="SetXTimeFormat.html" title="SetXTimeFormat"><span class="refentrytitle">SetXTimeFormat</span></a> or <a class="xref" href="SetYTimeFormat.html" title="SetYTimeFormat"><span class="refentrytitle">SetYTimeFormat</span></a>.
+Refer to the PHP documentation for <code class="function">strftime()</code> for
+details on the format string, but here are some examples for 31 December
+2004 at 1:23:45 pm:
+
+</p><div class="informaltable"><table summary="Date/time format examples" border="1"><colgroup><col /><col /></colgroup><thead><tr><th>Format String:</th><th>Result:</th></tr></thead><tbody><tr><td>%Y-%m-%d</td><td>2004-12-31</td></tr><tr><td>%b %Y</td><td>Dec 2004</td></tr><tr><td>%b %d, %Y</td><td>Dec 31, 2004</td></tr><tr><td>%d %b</td><td>31 Dec</td></tr><tr><td>%H:%M:%S</td><td>13:23:45</td></tr></tbody></table></div><p>
+</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>
+If you select 'time' formatting, but don't set a time format string,
+PHPlot-5.0rc3 and higher will format the values as hours, minutes, and
+seconds as shown in the last row of the table above.
+(The default format was undefined before version 5.0rc3.)
+  </p><p>
+Also note that there are limits to the range of this type of formatting
+that can make it unusable for historical data. On some platforms, dates
+before 1970-01-01 can not be formatted.
+  </p><p>
+Starting with PHPlot-5.0.4, empty string values for data labels are
+ignored for 'time' and 'data' formatting. Earlier versions would format
+the labels as 0 (for 'data') or cause an error (for 'time').
+  </p></div><p>
+While date/time formatting can be useful, for X values it may be
+easier to just format the label values in your PHP code and put the result
+into the label positions in the data array. If you need date/time formatting for
+Y values (and it is hard to imagine where that would be useful), you have
+no option but to use the 'time' format labels for tick values.
+</p></div></div><div class="navfooter"><hr /><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="conc-colors.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="concepts.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="conc-errors.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">3.5. Colors </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> 3.7. Error Handling</td></tr></table></div></body></html>

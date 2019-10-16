@@ -1,0 +1,65 @@
+html, body{
+   font-family: verdana;
+   font-size: 12px;
+   /*width: 700px;*/
+}
+
+table{
+    /*width: 700px;*/
+}
+
+td{
+   font-family: verdana;
+   font-size: 12px;
+}
+
+td.dez{
+   font-family: verdana;
+   font-size: 10px;
+}
+
+.dez{
+   font-family: verdana;
+   font-size: 10px;
+}
+
+.mainTitle{
+    font-size: 22px;
+    /*font-weight: bold;*/
+    text-align: center;
+}
+
+.bigTitle{
+    font-size: 40px;
+    /*font-weight: bold;*/
+    text-align: center;
+}
+
+.mediumTitle{
+    font-size: 14px;
+    /*font-weight: bold;*/
+    text-align: left;
+}
+
+.medText{
+    font-size: 14px;
+}
+
+.pagebreak{
+    page-break-before: always; /*page-break-before: { always | auto | avoid | left | right | inherit } ;*/
+}
+
+td.bgtitle{
+    background-color: #999999;
+    color: #FFFFFF;
+}
+
+.bgtitle{
+    background-color: #999999;
+    color: #FFFFFF;
+}
+
+#texto {
+position: absolute;
+margin-top: -30px;
+}

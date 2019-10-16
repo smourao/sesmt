@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /><title>SetPointShapes</title><link rel="stylesheet" href="phplotdoc.css" type="text/css" /><meta name="generator" content="DocBook XSL Stylesheets V1.73.2" /><link rel="start" href="index.html" title="PHPlot Reference Manual" /><link rel="up" href="reference.html" title="PHPlot Function Reference" /><link rel="prev" href="SetPlotType.html" title="SetPlotType" /><link rel="next" href="SetPointSizes.html" title="SetPointSizes" /></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">SetPointShapes</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="SetPlotType.html">Prev</a> </td><th width="60%" align="center">PHPlot Function Reference</th><td width="20%" align="right"> <a accesskey="n" href="SetPointSizes.html">Next</a></td></tr></table><hr /></div><div class="refentry" lang="en" xml:lang="en"><a id="SetPointShapes"></a><div class="titlepage"></div><div class="refnamediv"><h2><span class="refentrytitle">SetPointShapes</span></h2><p>SetPointShapes &#8212; Select a point shape for each data set</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><pre class="synopsis">
+$plot-&gt;SetPointShapes(<em class="parameter"><code>$pt</code></em>)
+    </pre></div><div class="refsect1" lang="en" xml:lang="en"><a id="id2572932"></a><h2>Description</h2><p>
+<code class="function">SetPointShapes</code> assigns a point shape to each data set
+in a plot.
+'Point' here refers to the marker drawn at each data point in 'points' and
+'linepoints' type plots.
+For example, if each data row contains 4 Y values, the first
+point shape will be used for the first Y value, the second point shape for
+the second Y value, etc. There are 10 point shapes to chose from.
+    </p></div><div class="refsect1" lang="en" xml:lang="en"><a id="id2572954"></a><h2>Parameters</h2><div class="variablelist"><dl><dt><span class="term"><em class="replaceable"><code>$pt</code></em></span></dt><dd><p>
+An array of point shape names, or a string naming a single point shape.
+If a string, that shape name is used for all data sets.
+If an array, the array values name the point shapes for each subsequent
+data set in a plot.
+The following shapes are available:
+            </p><div class="informaltable"><table summary="Available shape names" border="1"><colgroup><col /><col /></colgroup><thead><tr><th>Shape Name</th><th>Description</th></tr></thead><tbody><tr><td>circle</td><td>A hollow circle centered on the point.</td></tr><tr><td>cross</td><td>An X centered on the point.</td></tr><tr><td>diamond</td><td>A filled diamond (square rotated 45 degrees).</td></tr><tr><td>dot</td><td>A filled circle centered on the point.</td></tr><tr><td>halfline</td><td>A short line from the point going left.</td></tr><tr><td>line</td><td>A horizontal line centered on the point.</td></tr><tr><td>plus</td><td>A plus sign centered on the point.</td></tr><tr><td>rect</td><td>A filled square centered on the point.</td></tr><tr><td>triangle</td><td>A filled triangle pointing down from the point.</td></tr><tr><td>trianglemid</td><td>A filled triangle pointing down to the point.</td></tr><tr><td>none</td><td>No marker (see notes).</td></tr></tbody></table></div><p>
+See <a class="xref" href="ex-linepoints1.html#example-linepoints1" title="Example 5.7. Line/Point Plot, Point Shapes">Example 5.7, &#8220;Line/Point Plot, Point Shapes&#8221;</a> for a picture of the shapes.
+          </p></dd></dl></div></div><div class="refsect1" lang="en" xml:lang="en"><a id="id2573134"></a><h2>Notes</h2><p>
+If an array is used for <em class="parameter"><code>$pt</code></em>, it
+must use zero based sequential integer indexes. This is what the PHP manual 
+calls 'the usual integer indices (starting from zero, increasing by one)'.
+    </p><p>
+This applies only to 'points' and 'linepoints' plot types.
+    </p><p>
+By default, all data sets use the diamond shape.
+    </p><p>
+A point shape can be set to 'none' to suppress the point markers for that
+data set.
+This is only useful with 'linepoints' plot types, and results in a 'lines'
+plot type for that data set: a line only, but no markers.
+    </p></div><div class="refsect1" lang="en" xml:lang="en"><a id="id2573169"></a><h2>History</h2><p>
+Using 'none' as a point shape was added in PHPlot-5.0rc3.
+    </p></div></div><div class="navfooter"><hr /><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="SetPlotType.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="reference.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="SetPointSizes.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">SetPlotType </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> SetPointSizes</td></tr></table></div></body></html>
