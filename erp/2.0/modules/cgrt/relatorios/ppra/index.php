@@ -83,19 +83,13 @@ if($_GET[sem_assinatura]){
 		
 	}
 	
-	
 	if($tec_assinatura[funcionario_id] == 4){
 		$carimbo_tec = "RENATA DO AMARAL CARVALHO<br><small> &nbsp; TÉCNICO DE SEG. DO TRABALHO<br> &nbsp;&nbsp; REGISTRO MTE 29188/RJ<br> &nbsp;&nbsp;&nbsp; ASSD / MTE</small>";
 	}elseif($tec_assinatura[funcionario_id] == 54){
 		$carimbo_tec = "FLÁVIA CRISTINA GOMES BARBOSA<br><small> &nbsp; TÉCNICA EM SEGURANÇA NO TRABALHO<br> &nbsp;&nbsp; REG. 0047666/RJ<br> &nbsp;&nbsp;&nbsp; DSST/SM/MTE</small>";
 	}else{
-		
 		$carimbo_tec = "";
-		
 	}
-	
-	
-	
 	
 	$ass_responsavel = "<img src='".$tec_assinatura['assinatura']."' border='0' width='300' height='130'>";
 	$ass_codernadora = "<img src='".$resp_assinatura['assinatura']."' border='0' width='300' height='130'>";
@@ -124,18 +118,8 @@ ob_start();
     }else{
         $cabecalho  = "<table width=100% border=0 cellspacing=0 cellpadding=0 height=$header_h>";
         $cabecalho .= "<tr>";
-         $cabecalho .= '<td align="left" height=$header_h>
-            <p><strong>
-            <font size="7" face="Verdana, Arial, Helvetica, sans-serif">SESMT<sup><font size=3>®</font></sup></font>&nbsp;&nbsp;
-			<font size="1" face="Verdana, Arial, Helvetica, sans-serif">SERVIÇOS ESPECIALIZADOS DE SEGURANÇA<br> E MONITORAMENTO DE ATIVIDADES NO TRABALHO<br>
-			CNPJ&nbsp; 04.722.248/0001-17 &nbsp;&nbsp;INSC. MUN.&nbsp; 311.213-6</font></strong>
-            </td>';
-        $cabecalho .= ' <td width=40% align="right" height=$header_h>
-            <font face="Verdana, Arial, Helvetica, sans-serif" size="4">
-            <b>Programa de Prevenção de
-Riscos Ambientais</b>
-            </td>';
-        
+        $cabecalho .= "<td align=left height=$header_h valign=top width=400><img src='logonovo.png' width='400' height='80'></td>";
+        $cabecalho .= "<td align=right height=$header_h valign=top width=240><img src='main-logo.png' width='240' height='80'></td>";
         $cabecalho .= "</tr>";
         $cabecalho .= "</table>";
     }
@@ -148,7 +132,6 @@ Riscos Ambientais</b>
     else
         $rodape  = "<div style=\"position: relative; text-align: right; width: 100%\"><img src='"._IMG_PATH."renatasite.jpg' border=0 width='180' height='100'></div>";
         //$rodape  = "<div style=\"position: relative; text-align: right; width: 100%\"><img src='http://sesmt-rio.com/erp/img/ass_everaldo.PNG' border=0 width='180' height='110'></div>";
-        
 
     if($_GET[sem_timbre]){
         $rodape .= "<table width=100% border=0 cellspacing=0 cellpadding=0 height=$footer_h>";

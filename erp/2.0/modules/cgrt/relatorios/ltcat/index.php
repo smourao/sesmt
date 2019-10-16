@@ -111,18 +111,8 @@ ob_start();
     }else{
         $cabecalho  = "<table width=100% border=0 cellspacing=0 cellpadding=0 height=$header_h>";
         $cabecalho .= "<tr>";
-         $cabecalho .= '<td align="left" height=$header_h>
-            <p><strong>
-            <font size="7" face="Verdana, Arial, Helvetica, sans-serif">SESMT<sup><font size=3>®</font></sup></font>&nbsp;&nbsp;
-			<font size="1" face="Verdana, Arial, Helvetica, sans-serif">SERVIÇOS ESPECIALIZADOS DE SEGURANÇA<br> E MONITORAMENTO DE ATIVIDADES NO TRABALHO<br>
-			CNPJ&nbsp; 04.722.248/0001-17 &nbsp;&nbsp;INSC. MUN.&nbsp; 311.213-6</font></strong>
-            </td>';
-        $cabecalho .= ' <td width=40% align="right" height=$header_h>
-            <font face="Verdana, Arial, Helvetica, sans-serif" size="4">
-            <b>Laudo Técnico de Condições
-Ambientais de Trabalho</b>
-            </td>';
-        
+        $cabecalho .= "<td align=left height=$header_h valign=top width=400><img src='logonovo.png' width='400' height='80'></td>";
+        $cabecalho .= "<td align=right height=$header_h valign=top width=240><img src='main-logo.png' width='240' height='80'></td>";
         $cabecalho .= "</tr>";
         $cabecalho .= "</table>";
     }
