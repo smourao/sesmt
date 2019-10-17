@@ -1,7 +1,7 @@
 <?php
 
 include('../common/includes/database.php');
-
+//teste de github
 
 if(date("m")>10){
 	$mes = (date("m")-1);
