@@ -9,13 +9,13 @@ $buffer = pg_fetch_array($res);
 
 if(isset($_POST['btnAlterar'])){
 	//consulta se email ja existe
-	$cst = "SELECT * FROM reg_pessoa_juridica WHERE email = '{$_POST['email']}'";
+	/*$cst = "SELECT * FROM reg_pessoa_juridica WHERE email = '{$_POST['email']}'";
 	$rst = pg_query($cst);
 	$cach = pg_fetch_array($rst);
-	if($buffer['email'] != $cach['email']){
-		$up = "UPDATE reg_pessoa_juridica SET email = '{$_POST['email']}', senha = '".md5($_POST['senha'])."' WHERE cod_cliente = '{$_GET['cod_cliente']}'";
-		if($resup = pg_query($up))
-			echo '<script type="text/javascript">alert("Alteração realizada com sucesso!");</script>';
+	if($buffer['email'] != $cach['email']){*/
+	$up = "UPDATE reg_pessoa_juridica SET email = '{$_POST['email']}', senha = '".md5($_POST['senha'])."' WHERE cod_cliente = '{$_GET['cod_cliente']}'";
+	if($resup = pg_query($up)){
+		echo '<script type="text/javascript">alert("Alteração realizada com sucesso!");</script>';
 	}else{
 		echo '<script type="text/javascript">alert("Erro ao efetuar a alteração, email ja existe!");</script>';
 	}
