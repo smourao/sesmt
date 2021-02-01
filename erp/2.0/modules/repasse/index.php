@@ -835,6 +835,155 @@ for($a=2019;$a<=2019;$a++){
 		
 //*************************************************
 
+
+$total[1] = 0;
+$total[2] = 0;
+$total[3] = 0;
+$total[4] = 0;
+$total[5] = 0;
+$total[6] = 0;
+$total[7] = 0;
+$total[8] = 0;
+$total[9] = 0;
+$total[10] = 0;
+$total[11] = 0;
+$total[12] = 0;
+
+
+//2020 ****************************************************
+for($a=2020;$a<=2020;$a++){
+	for($yy=1;$yy<=12;$yy++){
+		$mes1 = $yy;
+		
+		if($mes1 == 1 || $mes1 == 3 || $mes1 == 5 || $mes1 == 7 || $mes1 == 8 || $mes1 == 10 || $mes1 == 12){
+			
+			$dia1 = 31;
+			
+			
+		}elseif($mes1 == 2){
+			
+			$bisexto = 2020;
+			if ((($bisexto % 4) == 0 and ($bisexto % 100)!=0) or ($bisexto % 400)==0){
+				
+				$dia1 = 29;
+				
+			}else{
+			
+				$dia1 = 28;
+				
+			}
+		}else{
+		
+			$dia1 = 30;	
+			
+		}
+		if($mes1<10){
+			$mes1='0'.$mes1;
+		}
+		$mes2 = $yy+1;
+		if($mes2<10){
+			$mes2='0'.$mes2;
+		}
+		$consulta = "SELECT *
+					FROM repasse  
+					WHERE (confirma_data BETWEEN '".$a."-".$mes1."-01' AND '".$a."-".$mes1."-".$dia1."') 
+					AND cod_clinica = $_GET[id] 
+					ORDER BY valor";
+					
+		$dados = @pg_query($consulta);
+		$buffer = @pg_fetch_all($dados);
+		if(@pg_num_rows($dados) <> 0){
+			for($xx=0;$xx<pg_num_rows($dados);$xx++){
+			$total[$yy] += $buffer[$xx][valor];
+			}
+			
+			if($total[$yy]){
+				echo "<tr>
+						  <td class='text roundborder' align=center> 01-".$mes1."-".$a." a ".$dia1."-".$mes1."-".$a."</td>
+						  <td class='text roundborder' align=center>".pg_num_rows($dados)."</td>
+						  <td class='text roundborder' align=center>".number_format($total[$yy], 2, ',','.')."</td>
+						  <td class='text roundborder' align=center><input name=ver type=button value='Visualizar' class='btn' onmouseover=\"showtip('tipbox', '- Visualizar o relatório do período selecionado.');\" onmouseout=\"hidetip('tipbox');\" onclick=\"newWindow('".current_module_path."relatorio/?id=".$_GET['id']."&mes=".$mes1."&ano=".$a."');\"></td>
+					  </tr>";
+			}
+		}
+	}
+}
+
+
+$total[1] = 0;
+$total[2] = 0;
+$total[3] = 0;
+$total[4] = 0;
+$total[5] = 0;
+$total[6] = 0;
+$total[7] = 0;
+$total[8] = 0;
+$total[9] = 0;
+$total[10] = 0;
+$total[11] = 0;
+$total[12] = 0;
+
+//2021 ****************************************************
+for($a=2021;$a<=2021;$a++){
+	for($yy=1;$yy<=12;$yy++){
+		$mes1 = $yy;
+		
+		if($mes1 == 1 || $mes1 == 3 || $mes1 == 5 || $mes1 == 7 || $mes1 == 8 || $mes1 == 10 || $mes1 == 12){
+			
+			$dia1 = 31;
+			
+			
+		}elseif($mes1 == 2){
+			
+			$bisexto = 2021;
+			if ((($bisexto % 4) == 0 and ($bisexto % 100)!=0) or ($bisexto % 400)==0){
+				
+				$dia1 = 29;
+				
+			}else{
+			
+				$dia1 = 28;
+				
+			}
+		}else{
+		
+			$dia1 = 30;	
+			
+		}
+		if($mes1<10){
+			$mes1='0'.$mes1;
+		}
+		$mes2 = $yy+1;
+		if($mes2<10){
+			$mes2='0'.$mes2;
+		}
+		$consulta = "SELECT *
+					FROM repasse  
+					WHERE (confirma_data BETWEEN '".$a."-".$mes1."-01' AND '".$a."-".$mes1."-".$dia1."') 
+					AND cod_clinica = $_GET[id] 
+					ORDER BY valor";
+					
+		$dados = @pg_query($consulta);
+		$buffer = @pg_fetch_all($dados);
+		if(@pg_num_rows($dados) <> 0){
+			for($xx=0;$xx<pg_num_rows($dados);$xx++){
+			$total[$yy] += $buffer[$xx][valor];
+			}
+			
+			if($total[$yy]){
+				echo "<tr>
+						  <td class='text roundborder' align=center> 01-".$mes1."-".$a." a ".$dia1."-".$mes1."-".$a."</td>
+						  <td class='text roundborder' align=center>".pg_num_rows($dados)."</td>
+						  <td class='text roundborder' align=center>".number_format($total[$yy], 2, ',','.')."</td>
+						  <td class='text roundborder' align=center><input name=ver type=button value='Visualizar' class='btn' onmouseover=\"showtip('tipbox', '- Visualizar o relatório do período selecionado.');\" onmouseout=\"hidetip('tipbox');\" onclick=\"newWindow('".current_module_path."relatorio/?id=".$_GET['id']."&mes=".$mes1."&ano=".$a."');\"></td>
+					  </tr>";
+			}
+		}
+	}
+}
+		
+//*************************************************
+
 	
 	
 	echo "</table>";
