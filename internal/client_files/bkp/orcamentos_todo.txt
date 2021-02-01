@@ -1,0 +1,7 @@
+- Exibir status como finalizado quando o serviço for concluído; (ao gerar adendo/contrato?)
+[ok]- Não permitir aprovar orçamentos vazios;
+
+
+[EXCLUIR]
+- Não permitir exclusão/edição de orçamentos aprovados, ou em uso por contratos (mesmo que não aprovados);
+

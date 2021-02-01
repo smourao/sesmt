@@ -1,0 +1,32 @@
+[GERAL]
+[ok] - verificar se e-mail já está cadastrado;
+[ok] - Inserir dados na tabela de cadastro do site de acordo com tipo de pessoa;
+[ok] - Enviar e-mail confirmando cadastro;
+
+[JURIDICA]
+[ok] - verificar CNPJ se já cadastrado no reg_pessoa_juridica;
+[ok] - verficair se CNAE é existente;
+[ok] - Verificar se empresa já está no simulador;
+[ok]   * Atualizar cadastro do simulador;
+[ok]   * inserir novo registro caso não exista;
+[ok]   * Atualizar orçamento do simulador ou gerar um novo;
+[ok] - Verificar se empresa já está no cadastro de cliente pelo CNPJ (vincular conta do site ao erp);
+[ok]   * Armazenar dados anteriores (numero funcionários);
+[ok]   * Atualizar cadastro de cliente; (só o número de funcionários mesmo)
+[ok]   * Migrar orçamento do simulador;
+[ok]   * Gerar contrato; 
+[ok]   * Enviar contrato ao cliente;
+
+
+[VERIFICAR]
+[ok] descricao_atividade
+[ok] grau_de_risco
+[ok] cnae_id
+[ok] num_rep
+[ok] membros_brigada
+[ok] Formatar campo CRC do contator;
+
+[ADICIONAL]
+- Ao migrar simulador para cadastro de cliente atualizar reg_pessoa_juridica com cod_cliente e grupo;
+- Gerar log de erros no site (especial opções de cliente, registro e recuperar senha);
+- Não permitir mais de 1 registro para o mesmo cnpj/cpf;
